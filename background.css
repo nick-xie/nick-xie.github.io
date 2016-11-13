@@ -1,0 +1,38 @@
+body {
+      animation: colorchange 100ms; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 100ms;
+      animation-iteration-count: infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: red;}
+      10%   {background: #ff9900;}
+      20%   {background: #ffff66;}
+      30%   {background: #99ff33;}
+      40%   {background: #00ff99;}
+      50%   {background: #00ccff;}
+      60%   {background: #6699ff;}
+      70%   {background: #9966ff;}
+      80%   {background: #ff00ff;}
+      90%   {background: #ff3399;}
+      95%   {background: #ff6666;}
+      100% {background: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: red;}
+      10%   {background: #ff9900;}
+      20%   {background: #ffff66;}
+      30%   {background: #99ff33;}
+      40%   {background: #00ff99;}
+      50%   {background: #00ccff;}
+      60%   {background: #6699ff;}
+      70%   {background: #9966ff;}
+      80%   {background: #ff00ff;}
+      90%   {background: #ff3399;}
+      95%   {background: #ff6666;}
+      100% {background: red;}
+    }
