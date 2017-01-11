@@ -1,6 +1,6 @@
 var scrollFunction = function(idstring) {
 	$('html, body').animate({
-	    scrollTop: $("#about").offset().top
+	    scrollTop: $(idstring).offset().top
 	}, 400);
 };
 $(document).ready(function (){
@@ -32,7 +32,7 @@ $(document).ready(function () {
 	    });
 	$(window).load( function(){
 	    
-	                $('.me').animate({'opacity':'1'},3000);
+	                $('.me').animate({'opacity':'1'},2500);
 	                   
 	    
 	    });

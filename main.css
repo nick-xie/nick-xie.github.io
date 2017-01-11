@@ -135,12 +135,9 @@ ul#menu li{
 	 -webkit-text-stroke: 1px #464B4D;
 	color: white;
 }
-.me{
-	opacity: 0;
-	padding-right: 30px;
-}
 .fade{
 	opacity: 0;
+	padding-right: 30px;
 }
 #news{
 	padding-top: 30px;
