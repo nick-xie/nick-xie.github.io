@@ -1,64 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
   <title>Nick Xie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="main.css">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link href="images/montserrat.otf" rel="stylesheet" type="text/css">-->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="main.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
-
 <body>
-  <div id="main">
-    <div id="header">
-     <ul id="menu">
-       <li id="aboutlink">about</li>
-       <li>projects</li>
-       <li>blog</li>
-       <li id="footerlink">contact</li>
-     </ul>
-     <div style="clear:both"></div>
-    </div><!--end header -->
-    <div class="container" style="white-space:nowrap;">
-        <section id="about" align="center">
-         <div id="content">
-         <div class="picture">
-         <img src="crop.jpg" class="fade" title="me" width="500px" align="left">
-             <p>Hello!<br/>I'm Nick.</p></div>
-                  <p></p><p></p><p></p><p></p><div class="bio">
-                  I am 18 years old and am currently studying<br/>
-                  Computer Science at the University of Waterloo.<br/>
-                  I enjoy thinking about math and programming in my<br/>
-                  spare time. I also occasionally actually create<br/>
-                  an application or something from those musings.<br/>
-                  Aside from tech, I enjoy competing in competitive<br/>
-                  Cross Country and Track and Field with the<br/>
-                  varsity team as well as on my own.<br/>
-                  Additionally, I greatly enjoy making music with my<br/>
-                  violin late at night. Feel free to check out my blog<br/>
-                  to learn more about me!</div>
-         </div><!--end content--></section>
-     
-         <div style="clear:both"></div>
-             
-    </div><!--end main container-->
-  </div><!--end main-->
-  <div id="footer">
-    <div class="container">
-      <div class="container">
-                  <a href="https://github.com/nick-xie">
-                    <img src="github.png" style="width:42px;height:42px;border:0;">
-                  </a>
-                  <a href="https://nick-xie.github.io/">
-                    <img src="resume.png" style="width:42px;height:42px;border:0;">
-                  </a>
-                  <a href="https://www.youtube.com/channel/UChzu7_kN6J6ZGxrdoA9kgjw">
-                    <img src="youtube.png" style="width:42px;height:42px;border:0;">
-                  </a>
-                  <p>© 2016  Nicholas Xie <br/>
-                  All Rights Reserved</p>
-              </div><!--end footer container-->
-    </div><!--end footer container-->
-  </div><!--end footer-->
-</body>
 
-</template>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<header class="nav-down">
+  <div class="row">
+    <div class="four columns offset-by-four" style="margin-top: 5%">
+      <ul class="mainmenu" id="menu">
+        <li id="aboutlink">about</li
+        ><li>projects</li
+        ><li id="bloglink">blog</li
+        ><li id="contactlink">contact</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+  <section class="about">
+  <div class="container">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-top: 10%">
+        <p class="bigcenter">Hi! I'm Nick.</p>
+      </div>
+      <div class="eight columns offset-by-two" style="margin-top: 10%">
+        <img src="images/crop.jpg" class="fade" title="me">
+      </div>
+      <div class="six columns offset-by-three" style="margin-top: 5%">
+        <h4>about me</h4>
+        <p class="meat" id="aboutme">I am 18 years old and am currently studying
+                  Computer Science at the University of Waterloo.
+                  I enjoy thinking about math and programming in my
+                  spare time. I also occasionally actually create
+                  an application or something from those musings.
+                  <br>Aside from tech, I enjoy competing in competitive
+                  Cross Country and Track and Field with the
+                  varsity team as well as on my own.
+                  Additionally, I greatly enjoy making music with my
+                  violin late at night. Feel free to check out my blog
+                  to learn more about me!</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <div class="row">
+        <div class="six columns offset-by-three" style="margin-top: 5%">
+          <h4>projects</h4>
+          <p class="meat">Still working on this part of the website. I would like to
+          have some sort of gallery type thing implemented. For the time being,
+          have a look at my GitHub or Resume, both of which are in the contact
+          section below.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="six columns offset-by-three" style="margin-top: 5%">
+        <h4>blog</h4>
+        <p class="meat">Despite a lack of consistency or volume, I very much
+        enjoy writing things. Please feel free to check out my old blog hosted
+        on WordPress <a href="http://enterthewigwam.blogspot.ca/" target="_blank">here.</a><br>I plan on using Medium going forward in the future. You can find that at the bottom of the page in the contact section. Enjoy!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contactArea">
+  <div class="row">
+    <div class="six columns offset-by-three" style="margin-top: 5%; margin-bottom: 3%;" id="icons">
+    <h4>contact</h4>
+      <a href="https://github.com/nick-xie" target="_blank">
+        <i class="fa fa-github fa-5x"></i>
+      </a>
+      <a href="images/ResumeNew.pdf" target="_blank">
+        <i class="fa fa-file-text-o fa-4x"></i>
+      </a>
+      <a href="mailto:happyfrabbit@gmail.com?Subject=Hello!" target="_top">
+        <i class="fa fa-envelope-open-o fa-5x"></i>
+      <a href="https://medium.com/@happyfrabbit" target="_blank">
+        <i class="fa fa-medium fa-5x"></i>
+      </a>
+      <a href="https://twitter.com/Nick_Xie" target="_blank">
+        <i class="fa fa-twitter-square fa-5x"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UChzu7_kN6J6ZGxrdoA9kgjw" target="_blank">
+        <i class="fa fa-youtube-play fa-5x"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="row">
+    <div class="twelve columns" style="margin-top: 3%">
+      <p>© 2016  Nicholas Xie <br/>
+      All Rights Reserved</p>
+    </div>
+  </div>
+</section>
+<!-- <div id="footer">
+                <p>© 2016  Nicholas Xie <br/>
+                All Rights Reserved</p>
+</div><!
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
