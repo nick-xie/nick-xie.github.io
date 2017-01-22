@@ -19,10 +19,10 @@ $(document).ready(function (){
     scrollFunction(".projects")
   });
   $("#bloglink").click(function() {
-    scrollFunction(".blog")
+    scrollFunction(".blogT")
   });
   $("#contactlink").click(function() {
-    scrollFunction("#icons")
+    scrollFunction("#contactArea")
   });
 });
 var didScroll;

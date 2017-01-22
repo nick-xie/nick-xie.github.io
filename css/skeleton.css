@@ -126,7 +126,7 @@ body {
   font-weight: 400;
   /*font-family: "montserrat";*/
   color: #222;
-  background: url(tester.jpg) no-repeat center center scroll; 
+  background: url(bkg.jpg) no-repeat center center scroll; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
