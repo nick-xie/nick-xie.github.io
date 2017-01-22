@@ -9,6 +9,10 @@
      font-family: "montserrat";
      src: url('images/montserrat.otf') format("opentype");
 }
+@font-face {
+     font-family: "montserratR";
+     src: url('montserrat.otf') format("opentype");
+}
 @font-face{
      font-family: "montserratb";
      src: url('montserratb.otf') format("opentype");
@@ -25,7 +29,17 @@ body {
   margin: 0;
 
 }
+.card {
+    box-shadow: 0 2em 4em 0 #494C4D;
+    transition: 0.5s;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
 
+.card:hover {
+    box-shadow: 0 8em 16em 0 #161717;
+}
 
 body {
   padding-top: 9em;
@@ -40,7 +54,7 @@ header {
 }
 
 .nav-up {
-  top: -9em;
+  top: -12em;
 }
 
 
@@ -61,7 +75,6 @@ ul.mainmenu {
 ul.mainmenu li {
   background: #464B4D;
   color: #f62f67;
-  font-family: "montserrat";
   display: inline-block;
   padding: 1em 1.2em 1em 1.2em; 
   text-decoration: none;
@@ -81,18 +94,27 @@ img.fade{
 .about h4{
   color: #f62f67;
   text-align: center;
+  font-family: "montserrat";
 }
 .blog h4{
   color: #f62f67;
   text-align: center;
+  font-family: "montserrat";
+}
+.blog h3{
+  color: white;
+  text-align: center;
+  font-family: "montserrat";
 }
 .projects h4{
   color: #f62f67;
   text-align: center;
+  font-family: "montserrat";
 }
 .contact h4{
   color: #f62f67;
   text-align: center;
+  font-family: "montserrat";
 }
 p.bigcenter{
   font-family: "montserratb";
@@ -122,10 +144,7 @@ p.meat{
   text-decoration: none;
   background-color: #464B4D;
 }
-#icons i{
-  margin-right: 0.32em;
-}
-#icons a{
+#contactArea a{
   text-decoration: none;
 }
 /* Style the links inside the list items
