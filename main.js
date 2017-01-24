@@ -14,7 +14,7 @@ var scrollFunction = function(idstring) {
 var open=0;
 var open2=0;
 var images =["images/slideshow/edited.jpg",
-"images/slideshow/bridge.jpg","images/slideshow/greatwall.jpg","images/slideshow/sunset.jpg",
+"images/slideshow/bridge.jpg","images/slideshow/greatWall.jpg","images/slideshow/sunset.jpg",
 "images/slideshow/mc.jpg","images/slideshow/mcgreen.jpg","images/slideshow/kitchener.jpg",
 "images/slideshow/path.jpg"]
 var images2 =["images/slideshow/edited2.jpg",
