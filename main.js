@@ -13,6 +13,15 @@ var scrollFunction = function(idstring) {
 };
 var open=0;
 var open2=0;
+var images =["images/slideshow/edited.jpg",
+"images/slideshow/bridge.jpg","images/slideshow/greatwall.jpg","images/slideshow/sunset.jpg",
+"images/slideshow/mc.jpg","images/slideshow/mcgreen.jpg","images/slideshow/kitchener.jpg",
+"images/slideshow/path.jpg"]
+var images2 =["images/slideshow/edited2.jpg",
+"images/slideshow/bridge2.jpg","images/slideshow/greatwall2.jpg","images/slideshow/sunset2.jpg",
+"images/slideshow/mc2.jpg","images/slideshow/mcgreen2.jpg","images/slideshow/kitchener2.jpg",
+"images/slideshow/path2.jpg"]
+var ind=0;
 $(document).ready(function (){
   $(".expanded").hide();
   $(".expanded2").hide();
@@ -49,6 +58,22 @@ $(document).ready(function (){
       $(".expanded2").hide(500);
       $(".collapsed2").show(500);
     }
+  });
+  $("#picLeft").click(function(){
+    ind=ind-1
+    if (ind<0){
+      ind=images.length-1;
+    }
+    $("#showimage").attr('src',images2[ind]);
+    $("#imgLink").attr('href',images[ind]);
+  });
+  $("#picRight").click(function(){
+    ind=ind+1
+    if (ind==images.length){
+      ind=0;
+    }
+    $("#showimage").attr('src',images2[ind]);
+    $("#imgLink").attr('href',images[ind]);
   });
 });
 var didScroll;
@@ -100,6 +125,7 @@ function hasScrolledT() {
     
     lastScrollTop = st;
 }
+
 // }
 // function hasScrolledTwo(){
 //   var st = $(this).scrollTop();

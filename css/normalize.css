@@ -32,6 +32,10 @@ body {
 .card:hover {
     box-shadow: 0 8em 16em 0 #161717;
 }
+
+.card2:hover {
+    box-shadow: 0 8em 16em 0 #161717;
+}
 .card2 {
     box-shadow: 0 2em 4em 0 #494C4D;
     transition: 0.5s;
@@ -39,11 +43,29 @@ body {
     padding: 0.6em;
 }
 
-.card2:hover {
+.pics:hover {
     box-shadow: 0 8em 16em 0 #161717;
 }
-
-
+.pics {
+    box-shadow: 0 2em 4em 0 #494C4D;
+    transition: 0.5s;
+    background: rgba(0,0,0,0.6);
+    padding: 0.6em;
+    text-align: center;
+}
+.pics a{
+  color: #CBD0D1;
+  font-size: 1.2em;
+}
+.pics a:hover{
+  color: #AAADAD;
+}
+.pics i{
+  color: #CBD0D1;
+}
+.pics i:hover{
+  color: #AAADAD;
+}
 body {
   padding-top: 9em;
 }
