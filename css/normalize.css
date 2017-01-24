@@ -1,13 +1,7 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
+/*fonts*/
 @font-face {
      font-family: "montserrat";
-     src: url('images/montserrat.otf') format("opentype");
+     src: url('thin.otf') format("opentype");
 }
 @font-face {
      font-family: "montserratR";
@@ -22,17 +16,15 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-/**
- * Remove default margin.
- */
+
 body {
   margin: 0;
 
 }
+/*Media Card*/
 .card {
     box-shadow: 0 2em 4em 0 #494C4D;
     transition: 0.5s;
-    width: 100%;
     background: rgba(0,0,0,0.6);
     padding: 0.6em;
 }
@@ -40,10 +32,22 @@ body {
 .card:hover {
     box-shadow: 0 8em 16em 0 #161717;
 }
+.card2 {
+    box-shadow: 0 2em 4em 0 #494C4D;
+    transition: 0.5s;
+    background: rgba(0,0,0,0.6);
+    padding: 0.6em;
+}
+
+.card2:hover {
+    box-shadow: 0 8em 16em 0 #161717;
+}
+
 
 body {
   padding-top: 9em;
 }
+/*menu thing*/
 header {
   z-index: 1;
   height: 9em;

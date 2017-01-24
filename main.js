@@ -11,7 +11,11 @@ var scrollFunction = function(idstring) {
       scrollTop: $(idstring).offset().top
   }, 400);
 };
+var open=0;
+var open2=0;
 $(document).ready(function (){
+  $(".expanded").hide();
+  $(".expanded2").hide();
   $("#aboutlink").click(function() {
     scrollFunction(".about")
   });
@@ -23,6 +27,28 @@ $(document).ready(function (){
   });
   $("#contactlink").click(function() {
     scrollFunction("#contactArea")
+  });
+  $(".card").click(function(){
+    if (open==0){
+      open=1;
+      $(".expanded").show(500);
+      $(".collapsed").hide(500);
+    }else{
+      open=0;
+      $(".expanded").hide(500);
+      $(".collapsed").show(500);
+    }
+  });
+  $(".card2").click(function(){
+    if (open2==0){
+      open2=1;
+      $(".expanded2").show(500);
+      $(".collapsed2").hide(500);
+    }else{
+      open2=0;
+      $(".expanded2").hide(500);
+      $(".collapsed2").show(500);
+    }
   });
 });
 var didScroll;
