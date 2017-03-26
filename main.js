@@ -20,6 +20,7 @@ var images =[]
 var images2 =[]
 var ind=0;
 var dataFile="";
+var loaded=0;
 $(document).ready(function (){
   $.get("links.txt", function(data) {
       dataFile=data.split('\n');
@@ -30,11 +31,10 @@ $(document).ready(function (){
       	images.push(dataFile[i]);
       	images2.push(dataFile[i+1]);
       }
+      loaded=1;
       //console.log("wait");
       //alert(images);
   });
-});
-$(document).ready(function (){
   //alert("ohno");
   //alert(images);
   //alert(images2);
@@ -82,20 +82,26 @@ $(document).ready(function (){
     }
   });
   $("#picLeft").click(function(){
-    ind=ind-1
-    if (ind<0){
-      ind=images.length-1;
-    }
-    $("#showimage").attr('src',images2[ind]);
-    $("#imgLink").attr('href',images[ind]);
+    if(loaded==1){
+    	ind=ind-1
+    	if (ind<0){
+      		ind=images.length-1;
+    	}
+    	$("#showimage").attr('src',images2[ind]);
+    	$("#imgLink").attr('href',images[ind]);
+	}else{
+		alert("Wait...");
+	}
   });
   $("#picRight").click(function(){
-    ind=ind+1
-    if (ind==images.length){
-      ind=0;
+    if(loaded==1){
+    	ind=ind+1
+    	if (ind==images.length){
+      		ind=0;
+    	}
+    	$("#showimage").attr('src',images2[ind]);
+    	$("#imgLink").attr('href',images[ind]);
     }
-    $("#showimage").attr('src',images2[ind]);
-    $("#imgLink").attr('href',images[ind]);
   });
 });
 var didScroll;
