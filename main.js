@@ -32,6 +32,7 @@ $(document).ready(function (){
       alert(data);
       alert(dataFile);
       alert(dataFile[0]);
+      alert("check");
   });
   for (var i = 0; i < dataFile.length; i++) {
   	alert(dataFile[i]);
