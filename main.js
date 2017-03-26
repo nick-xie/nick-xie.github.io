@@ -31,6 +31,7 @@ $(document).ready(function (){
       dataFile=data.split('\n');
       alert(data);
       alert(dataFile);
+      alert(dataFile[0]);
   });
   for (var i = 0; i < dataFile.length; i++) {
   	alert(dataFile[i]);
