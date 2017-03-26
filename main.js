@@ -29,6 +29,8 @@ var dataFile="";
 $(document).ready(function (){
   $.get("links.txt", function(data) {
       dataFile=data.split('\n');
+      alert(data);
+      alert(dataFile);
   });
   for (var i = 0; i < dataFile.length; i++) {
   	alert(dataFile[i]);
