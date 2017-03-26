@@ -30,8 +30,11 @@ $(document).ready(function (){
       	images.push(dataFile[i]);
       	images2.push(dataFile[i+1]);
       }
+      //console.log("wait");
       //alert(images);
   });
+});
+$(document).ready(function (){
   //alert("ohno");
   //alert(images);
   //alert(images2);
