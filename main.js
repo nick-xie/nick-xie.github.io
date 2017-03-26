@@ -25,11 +25,14 @@ var images2 =["images/slideshow/edited2.jpg",
 "images/slideshow/mc2.jpg","images/slideshow/mcgreen2.jpg","images/slideshow/kitchener2.jpg",
 "images/slideshow/path2.jpg"]
 var ind=0;
-
+var dataFile="";
 $(document).ready(function (){
   $.get("links.txt", function(data) {
-      //alert(data);
+      dataFile=data.split('\n');
   });
+  for (var i = 0; i < dataFile.length; i++) {
+  	alert(dataFile[i]);
+  }
   // $.ajax({
   //     url : "links.txt",
   //     dataType: 'text',
