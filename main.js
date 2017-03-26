@@ -33,6 +33,7 @@ $(document).ready(function (){
       	images.push(dataFile[i]);
       	images2.push(dataFile[i+1]);
       }
+      alert(images);
   });
   alert("ohno");
   alert(images);
