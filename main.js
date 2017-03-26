@@ -28,7 +28,7 @@ var ind=0;
 
 $(document).ready(function (){
   $.get("links.txt", function(data) {
-      alert(data);
+      //alert(data);
   });
   // $.ajax({
   //     url : "links.txt",
