@@ -31,6 +31,7 @@ $(document).ready(function (){
       	images.push(dataFile[i]);
       	images2.push(dataFile[i+1]);
       }
+      alert(images);
       loaded=1;
       //console.log("wait");
       //alert(images);
