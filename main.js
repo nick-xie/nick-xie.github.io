@@ -17,7 +17,10 @@ var open2=0;
 //compressed images
 var images =[]
 //full images
-var images2 =[]
+var images2 =["images/slideshow/edited2.jpg",
+  "images/slideshow/bridge2.jpg","images/slideshow/sunset2.jpg",
+  "images/slideshow/mc2.jpg","images/slideshow/mcgreen2.jpg","images/slideshow/kitchener2.jpg",
+  "images/slideshow/path2.jpg"]
 var ind=0;
 var dataFile="";
 $(document).ready(function (){
@@ -31,6 +34,9 @@ $(document).ready(function (){
       	images2.push(dataFile[i+1]);
       }
   });
+  alert("ohno");
+  alert(images);
+  alert(images2);
   // $.ajax({
   //     url : "links.txt",
   //     dataType: 'text',
