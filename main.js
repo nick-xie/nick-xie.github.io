@@ -31,12 +31,11 @@ $(document).ready(function (){
       dataFile=data.split('\n');
       alert(data);
       alert(dataFile);
-      alert(dataFile[0]);
-      alert("check");
+      alert(dataFile.length);
+      for (var i = 0; i < dataFile.length; i++) {
+      	alert(dataFile[i]);
+      }
   });
-  for (var i = 0; i < dataFile.length; i++) {
-  	alert(dataFile[i]);
-  }
   // $.ajax({
   //     url : "links.txt",
   //     dataType: 'text',
