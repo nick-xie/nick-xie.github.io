@@ -15,27 +15,33 @@ var open=0;
 var open2=0;
 
 //compressed images
-var images =[]
+var images =["images/slideshow/edited.jpg",
+  "images/slideshow/bridge.jpg","images/slideshow/sunset.jpg",
+  "images/slideshow/mc.jpg","images/slideshow/mcgreen.jpg","images/slideshow/kitchener.jpg",
+  "images/slideshow/path.jpg"]
 //full images
-var images2 =[]
+var images2 =["images/slideshow/edited2.jpg",
+  "images/slideshow/bridge2.jpg","images/slideshow/sunset2.jpg",
+  "images/slideshow/mc2.jpg","images/slideshow/mcgreen2.jpg","images/slideshow/kitchener2.jpg",
+  "images/slideshow/path2.jpg"]
 var ind=0;
 var dataFile="";
-var loaded=0;
+var loaded=1;
 $(document).ready(function (){
-  $.get("links.txt", function(data) {
-      dataFile=data.split('\n');
-      // alert(data);
-      // alert(dataFile);
-      // alert(dataFile.length);
-      for (var i = 0; i < dataFile.length; i=i+2) {
-      	images.push(dataFile[i]);
-      	images2.push(dataFile[i+1]);
-      }
-      alert(images);
-      loaded=1;
-      //console.log("wait");
-      //alert(images);
-  });
+  // $.get("links.txt", function(data) {
+  //     dataFile=data.split('\n');
+  //     // alert(data);
+  //     // alert(dataFile);
+  //     // alert(dataFile.length);
+  //     for (var i = 0; i < dataFile.length; i=i+2) {
+  //     	images.push(dataFile[i]);
+  //     	images2.push(dataFile[i+1]);
+  //     }
+  //     //alert(images);
+  //     loaded=1;
+  //     //console.log("wait");
+  //     //alert(images);
+  // });
   //alert("ohno");
   //alert(images);
   //alert(images2);
