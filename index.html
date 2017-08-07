@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
 
   <!-- Basic Page Needs
@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
   <!-- Favicon
@@ -32,7 +32,6 @@
 
 </head>
 <body>
-<iframe id="linkFile" src="links.txt" onload="LoadFile();" style="display: none;"></iframe>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <header class="nav-down">
@@ -113,26 +112,7 @@
         <br><br><br><br>
         <div class="card2">
         <h3>Something to watch:</h3>
-        <img src="images/LiT.jpeg">
-        <h2>Sofia Coppola's <i>Lost in Translation</i> (2003).<br><br>
-        <span class="collapsed2">
-        The beauty of this film's cinematography...
-        <br><br>Click to expand...
-        </span>
-        <span class="expanded2">
-        The beauty of this film's
-        cinematography is remarkable. It is hard for me to describe what draws me to this
-        film so I'll make do with wishy washy ramblings. The above image is one of my favourite stills
-        from the movie and I believe it is for a very personal reason. My relation to
-        Asia is extraordinarily my own. I continually try to write down in some form
-        of writing on what Asia and specifically Shanghai mean to me but I continually
-        fail. But if there's one way I can always drawn myself into this feeling, it is by
-        looking at this image. Perhaps this is why I am so fond of this movie however I believe
-        the narrative substance is equally compelling. I very much consider Spike
-        Jonze's <i>Her</i> (2013) to be <i>Lost in Translation</i>'s spiritual successor
-        and not just because both can be thought of to be the respective tellings of Coppola and Jonze's divorce. The shared themes of isolation and feelings of emptiness and lack of direction
-        are hard to describe moments that everyone feels in their life. It is seriously admirable
-        how in touch with this and how well Coppola and Jonze are able to depict these lonely sentiments.</span></h2>
+        <div ng-include="'toWatch.html'"></div>
         </div>
         <br><br><br><br>
         <div class="pics">

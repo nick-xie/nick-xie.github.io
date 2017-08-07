@@ -1,3 +1,5 @@
+angular.module('app',[]);
+
 function myFunction() {
     var x = document.getElementById("menu");
     if (x.className === "mainmenu") {
@@ -130,7 +132,7 @@ function hasScrolled(){
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > (bottom_of_object/1.4) ){
-          $(this).animate({'opacity':'1'},1800);          
+          $(this).animate({'opacity':'1'},1800);
       }
   });
 }
@@ -141,11 +143,11 @@ var delta = 5;
 var navbarHeight = $('header').outerHeight();
 function hasScrolledT() {
     var st = $(this).scrollTop();
-    
+
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
-    
+
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
@@ -157,7 +159,7 @@ function hasScrolledT() {
             $('header').removeClass('nav-up').addClass('nav-down');
         }
     }
-    
+
     lastScrollTop = st;
 }
 
@@ -173,7 +175,7 @@ function hasScrolledT() {
 //   } else {
 //     // Scroll Up
 //     // If did not scroll past the document (possible on mac)...
-//     if(st + $(window).height() < $(document).height()) { 
+//     if(st + $(window).height() < $(document).height()) {
 //       $(‘header’).removeClass(‘nav-up’).addClass(‘nav-down’);
 //     }
 //   }
@@ -182,20 +184,20 @@ function hasScrolledT() {
 // }
 // $(document).ready(function () {
 //   $(window).scroll( function(){
-      
+
 //           /* Check the location of each desired element */
 //           $('.fade').each(function(i){
 //               var bottom_of_object = $(this).offset().top + $(this).outerHeight();
 //               var bottom_of_window = $(window).scrollTop() + $(window).height();
-              
+
 //               /* If the object is completely visible in the window, fade it it */
 //               if( bottom_of_window > bottom_of_object ){
-                  
+
 //                   $(this).animate({'opacity':'1'},1800);
-                      
+
 //               }
-              
-//           }); 
-      
+
+//           });
+
 //       });
 // })
