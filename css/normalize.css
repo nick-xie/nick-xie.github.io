@@ -102,7 +102,7 @@ ul.mainmenu li {
   background: #464B4D;
   color: #f62f67;
   display: inline-block;
-  padding: 1em 1.2em 1em 1.2em; 
+  padding: 1em 1.2em 1em 1.2em;
   text-decoration: none;
 }
 /* Change background color of links on hover */
@@ -122,28 +122,28 @@ img.fade{
   text-align: center;
   font-family: "montserrat";
 }
-.blog h4{
+.content h4{
   color: #f62f67;
   text-align: center;
   font-family: "montserrat";
 }
-.blog h3{
+.content h3{
   color: white;
   text-align: center;
   font-family: "montserrat";
 }
-.blog h2{
+.content h2{
   font-size: 1.3em;
   color: #A5A8C4;
   text-align: center;
   line-height: 1.5em;
   font-family: "montserrat";
 }
-.blog h2 a{
+.content h2 a{
   color: #767785;
   text-decoration: none;
 }
-.blog a{
+.content a{
   text-decoration: none;
 }
 .projects h4{
@@ -168,14 +168,6 @@ p.meat{
   font-size: 1.5em;
   text-align: center;
 }
-/*#footer{
-  padding-top: 2em;
-  padding-bottom: 2em;
-  text-align: center;
-  font-size: 0.4em;
-  color: #676666;
-  text-decoration: none;
-  background-color: #464B4D;*/
 .footer{
   padding-bottom: 2em;
   text-align: center;

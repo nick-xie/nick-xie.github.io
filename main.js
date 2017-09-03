@@ -1,5 +1,6 @@
-angular.module('app',[]);
+angular.module('app',['ngMaterial']);
 
+// python -m SimpleHTTPServer to run locally with angular
 function myFunction() {
     var x = document.getElementById("menu");
     if (x.className === "mainmenu") {
@@ -27,35 +28,10 @@ var images2 =["images/slideshow/edited2.jpg",
   "images/slideshow/mc2.jpg","images/slideshow/mcgreen2.jpg","images/slideshow/kitchener2.jpg",
   "images/slideshow/path2.jpg"]
 var ind=0;
-var dataFile="";
 var loaded=1;
 $(document).ready(function (){
-  // $.get("links.txt", function(data) {
-  //     dataFile=data.split('\n');
-  //     // alert(data);
-  //     // alert(dataFile);
-  //     // alert(dataFile.length);
-  //     for (var i = 0; i < dataFile.length; i=i+2) {
-  //     	images.push(dataFile[i]);
-  //     	images2.push(dataFile[i+1]);
-  //     }
-  //     //alert(images);
-  //     loaded=1;
-  //     //console.log("wait");
-  //     //alert(images);
-  // });
-  //alert("ohno");
-  //alert(images);
-  //alert(images2);
-  // $.ajax({
-  //     url : "links.txt",
-  //     dataType: 'text',
-  //     complete : function (data) {
-  //         alert(data);
-  //     },
-  // });
-  $(".expanded").hide();
-  $(".expanded2").hide();
+
+  // -- Menu jump clicks
   $("#aboutlink").click(function() {
     scrollFunction(".about")
   });
@@ -63,11 +39,16 @@ $(document).ready(function (){
     scrollFunction(".projects")
   });
   $("#bloglink").click(function() {
-    scrollFunction(".blogT")
+    scrollFunction(".blog")
   });
   $("#contactlink").click(function() {
     scrollFunction("#contactArea")
   });
+
+  // -- Expandable media cards
+  $(".expanded").hide();
+  $(".expanded2").hide();
+
   $(".card").click(function(){
     if (open==0){
       open=1;
@@ -79,6 +60,7 @@ $(document).ready(function (){
       $(".collapsed").show(500);
     }
   });
+
   $(".card2").click(function(){
     if (open2==0){
       open2=1;
@@ -90,6 +72,8 @@ $(document).ready(function (){
       $(".collapsed2").show(500);
     }
   });
+
+  // -- Picture viewer scroll
   $("#picLeft").click(function(){
     if(loaded==1){
     	ind=ind-1
@@ -98,10 +82,11 @@ $(document).ready(function (){
     	}
     	$("#showimage").attr('src',images2[ind]);
     	$("#imgLink").attr('href',images[ind]);
-	}else{
-		alert("Wait...");
-	}
+    }else{
+		  alert("Wait...");
+    }
   });
+
   $("#picRight").click(function(){
     if(loaded==1){
     	ind=ind+1
@@ -113,6 +98,7 @@ $(document).ready(function (){
     }
   });
 });
+
 var didScroll;
 // $(document).ready(function (){
   $(window).scroll(function(event){
@@ -162,42 +148,3 @@ function hasScrolledT() {
 
     lastScrollTop = st;
 }
-
-// }
-// function hasScrolledTwo(){
-//   var st = $(this).scrollTop();
-//   if (Math.abs(lastScrollTop — st) <= delta)
-//     return;
-//   // If current position > last position AND scrolled past navbar...
-//   if (st > lastScrollTop && st > navbarHeight){
-//     // Scroll Down
-//     $(‘header’).removeClass(‘nav-down’).addClass(‘nav-up’);
-//   } else {
-//     // Scroll Up
-//     // If did not scroll past the document (possible on mac)...
-//     if(st + $(window).height() < $(document).height()) {
-//       $(‘header’).removeClass(‘nav-up’).addClass(‘nav-down’);
-//     }
-//   }
-//   lastScrollTop = st;
-// }
-// }
-// $(document).ready(function () {
-//   $(window).scroll( function(){
-
-//           /* Check the location of each desired element */
-//           $('.fade').each(function(i){
-//               var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-//               var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-//               /* If the object is completely visible in the window, fade it it */
-//               if( bottom_of_window > bottom_of_object ){
-
-//                   $(this).animate({'opacity':'1'},1800);
-
-//               }
-
-//           });
-
-//       });
-// })

@@ -23,7 +23,13 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Angular Stuff -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-messages.min.js"></script>
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
   <!-- Favicon
@@ -62,33 +68,15 @@
   </div>
   </section>
 
-  <section class="blog">
+  <section class="content">
   <div class="container">
     <div class="row">
       <div class="five columns" style="margin-top: 5%">
-        <h4 class="about">about me</h4>
-        <p class="meat" id="aboutme">I am 18 years old and am currently studying
-                  Computer Science at the University of Waterloo.
-                  I enjoy thinking. I'm a huge fan of figuring out puzzles and
-                  brainteasters as well as reflecting on math and programming ideas.
-                  <br>Aside from tech, I take pleasure in racing competitive
-                  Cross Country and Track and Field with the
-                  varsity team as well as on my own.
-                  As well, I greatly appreciate the role music has in my life.
-                  It has brought me many friends and experiences as well as
-                  allowing me to savour my life more. I am a longtime player
-                  of the violin. Feel free to check out my blog or my media
-                  recommendations to learn more about me!</p></p><br><br><br>
-        <h4 class="blogT">blog</h4>
-        <p class="meat">Despite a lack of consistency or volume, I very much
-        enjoy writing things. Please feel free to check out my old blog hosted
-        on WordPress <a href="http://enterthewigwam.blogspot.ca/" target="_blank">here</a>.<br>I plan on using Medium going forward in the future. You can find that at the bottom of the page in the contact section. Enjoy!</p><br><br><br>
-
-        <h4 class="projects">projects</h4>
-        <p class="meat">Still working on this part of the website. I would like to
-        have some sort of gallery type thing implemented. For the time being,
-        have a look at my GitHub or Resume, both of which are in the contact
-        section below.</p>
+        <div ng-include="'about.html'"></div>
+        <br><br><br>
+        <div ng-include="'blog.html'"></div>
+        <br><br><br>
+        <div ng-include="'projects.html'"></div>
       </div>
       <div class="six columns offset-by-one" id="media" style="margin-top: 1%">
         <div class="card">
@@ -112,7 +100,7 @@
         <br><br><br><br>
         <div class="card2">
         <h3>Something to watch:</h3>
-        <div ng-include="'toWatch.html'"></div>
+        <div ng-include="'watchRecommendations/current.html'"></div>
         </div>
         <br><br><br><br>
         <div class="pics">
@@ -130,26 +118,6 @@
 <section class="contact" id="contactArea">
   <div class="row" style="margin-top: 5%">
   <h4>contact</h4>
-<!--     <div class="six columns offset-by-three" style="margin-top: 5%; margin-bottom: 3%;" id="icons">
-    <h4>contact</h4>
-      <a href="https://github.com/nick-xie" target="_blank">
-        <i class="fa fa-github fa-5x"></i>
-      </a>
-      <a href="images/Resume.pdf" target="_blank">
-        <i class="fa fa-file-text-o fa-4x"></i>
-      </a>
-      <a href="mailto:happyfrabbit@gmail.com?Subject=Hello!" target="_top">
-        <i class="fa fa-envelope-open-o fa-5x"></i>
-      <a href="https://medium.com/@happyfrabbit" target="_blank">
-        <i class="fa fa-medium fa-5x"></i>
-      </a>
-      <a href="https://twitter.com/Nick_Xie" target="_blank">
-        <i class="fa fa-twitter-square fa-5x"></i>
-      </a>
-      <a href="https://www.youtube.com/channel/UChzu7_kN6J6ZGxrdoA9kgjw" target="_blank">
-        <i class="fa fa-youtube-play fa-5x"></i>
-      </a>
-    </div> -->
     <div class="one column offset-by-three" style="margin-bottom: 3%">
       <a href="https://github.com/nick-xie" target="_blank">
         <i class="fa fa-github fa-5x"></i>
