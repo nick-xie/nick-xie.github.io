@@ -65,6 +65,7 @@ body {
 }
 .pics i:hover{
   color: #AAADAD;
+  cursor: pointer;
 }
 body {
   padding-top: 9em;
@@ -99,7 +100,8 @@ ul.mainmenu {
 }
 /* Float the list items side by side */
 ul.mainmenu li {
-  background: #464B4D;
+  /*background: #464B4D;*/
+  background-color: #3a3e3f;
   color: #f62f67;
   display: inline-block;
   padding: 1em 1.2em 1em 1.2em;
@@ -108,6 +110,7 @@ ul.mainmenu li {
 /* Change background color of links on hover */
 .mainmenu li:hover{
   background: white;
+  cursor: pointer;
 }
 .fade{
   opacity: 0;
@@ -151,10 +154,35 @@ img.fade{
   text-align: center;
   font-family: "montserrat";
 }
+.contact h2{
+  color: white;
+  margin-bottom: 0;
+  text-transform: none;
+  text-align: center;
+  font-weight: 100 !important;
+}
+.contact h3{
+  color: white;
+  text-align: center;
+  font-family: "montserrat";
+}
 .contact h4{
   color: #f62f67;
   text-align: center;
   font-family: "montserrat";
+}
+.contact ul{
+  text-align: center;
+}
+.contact ul li{
+  list-style: none;
+  display: inline-block;
+}
+.contact button{
+  height: 100%;
+}
+.contact button:hover h2{
+  color: #f62f67;
 }
 p.bigcenter{
   font-family: "montserratb";
@@ -174,7 +202,7 @@ p.meat{
   font-size: 0.4em;
   color: #676666;
   text-decoration: none;
-  background-color: #464B4D;
+  background-color: #3a3e3f;
 }
 #contactArea a{
   text-decoration: none;
