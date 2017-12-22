@@ -1,4 +1,12 @@
-angular.module('app',['ngMaterial']);
+var site = angular.module('app',[]);
+site.controller("mainController", function($scope, $window) {
+  $window.onload = function() {
+      $(".expanded").hide();
+      $(".collapsed").show();
+      $(".expanded2").hide();
+      $(".collapsed2").show();
+  };
+});
 
 // python -m SimpleHTTPServer to run locally with angular
 function myFunction() {
@@ -14,6 +22,8 @@ var scrollFunction = function(idstring) {
       scrollTop: $(idstring).offset().top
   }, 400);
 };
+
+// Vars to control open/closed cards
 var open=0;
 var open2=0;
 
@@ -29,6 +39,8 @@ var images2 =["images/slideshow/edited2.jpg",
   "images/slideshow/path2.jpg"]
 var ind=0;
 var loaded=1;
+
+// All onclick things
 $(document).ready(function (){
 
   // -- Menu jump clicks
@@ -46,9 +58,6 @@ $(document).ready(function (){
   });
 
   // -- Expandable media cards
-  $(".expanded").hide();
-  $(".expanded2").hide();
-
   $(".card").click(function(){
     if (open==0){
       open=1;
@@ -100,11 +109,10 @@ $(document).ready(function (){
 });
 
 var didScroll;
-// $(document).ready(function (){
-  $(window).scroll(function(event){
-    didScroll=true;
-  });
-// })
+$(window).scroll(function(event){
+  didScroll=true;
+});
+
 setInterval(function(){
   if(didScroll){
     hasScrolled();
@@ -112,6 +120,7 @@ setInterval(function(){
     didScroll=false;
   }
 }, 150);
+
 function hasScrolled(){
   $('.fade').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
