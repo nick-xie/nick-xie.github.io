@@ -19,25 +19,21 @@ html {
 
 body {
   margin: 0;
-
+  padding-top: 9em;
 }
 
 button h2 {
   color: white;
 }
-
 button i {
   color: white;
 }
-
 button:hover h2 {
   color: #f62f67;
 }
-
 button:hover i {
   color: #f62f67;
 }
-
 button:focus {
   outline: 0;
 }
@@ -75,23 +71,7 @@ button:focus {
     padding: 0.6em;
     text-align: center;
 }
-.pics a{
-  color: #CBD0D1;
-  font-size: 1.2em;
-}
-.pics a:hover{
-  color: #AAADAD;
-}
-.pics i{
-  color: #CBD0D1;
-}
-.pics i:hover{
-  color: #AAADAD;
-  cursor: pointer;
-}
-body {
-  padding-top: 9em;
-}
+
 /*menu thing*/
 header {
   z-index: 1;
@@ -118,6 +98,18 @@ header {
   margin-bottom: 0.5em;
 }
 
+/* Photo slider */
+#photoSlider button {
+  font-size: 0.1em;
+  /*display: inline-flex;*/
+  /*margin-top: 0;*/
+}
+#photoSlider img {
+  /*margin-bottom: 0;*/
+}
+#photoSlider p {
+  color: white;
+}
 
 /* HTML5 display definitions
    ========================================================================== */

@@ -24,61 +24,41 @@ site.controller("mainController", function($scope, $window) {
     --$scope.projectsSlideNum;
     if ($scope.projectsSlideNum < 1) $scope.projectsSlideNum = $scope.projectsMaxSlides;
   };
+
+  // Photos Carousel
+  $scope.images = [
+    { num: 1, thumb: "images/slideshow/edited2.jpg", full: "images/slideshow/edited.jpg"},
+    { num: 2, thumb: "images/slideshow/bridge2.jpg", full: "images/slideshow/bridge.jpg"},
+    { num: 3, thumb: "images/slideshow/sunset2.jpg", full: "images/slideshow/sunset.jpg"},
+    { num: 4, thumb: "images/slideshow/mc2.jpg", full: "images/slideshow/mc.jpg"},
+    { num: 5, thumb: "images/slideshow/mcgreen2.jpg", full: "images/slideshow/mcgreen.jpg"},
+    { num: 6, thumb: "images/slideshow/kitchener2.jpg", full: "images/slideshow/kitchener1.jpg"},
+    { num: 7, thumb: "images/slideshow/path2.jpg", full: "images/slideshow/path.jpg"}
+  ];
+  $scope.photosNext = function() {
+    $('.photos').slick('slickNext');
+  };
+
+  $scope.photosPrev = function() {
+    $('.photos').slick('slickPrev');
+  };
 });
 
 var scrollFunction = function(idstring) {
   $('html, body').animate({
-      scrollTop: $(idstring).offset().top
+    scrollTop: $(idstring).offset().top
   }, 400);
 };
 
-// Vars to control open/closed cards
-var open=0;
-var open2=0;
-
-//compressed images
-var images =["images/slideshow/edited.jpg",
-  "images/slideshow/bridge.jpg","images/slideshow/sunset.jpg",
-  "images/slideshow/mc.jpg","images/slideshow/mcgreen.jpg","images/slideshow/kitchener.jpg",
-  "images/slideshow/path.jpg"]
-//full images
-var images2 =["images/slideshow/edited2.jpg",
-  "images/slideshow/bridge2.jpg","images/slideshow/sunset2.jpg",
-  "images/slideshow/mc2.jpg","images/slideshow/mcgreen2.jpg","images/slideshow/kitchener2.jpg",
-  "images/slideshow/path2.jpg"]
-var ind=0;
-var loaded=1;
-
-// All onclick things
 $(document).ready(function (){
 
+  // Carousels
   $(".projects").slick({
     arrows: false
   });
 
-  // -- Picture viewer scroll
-  $("#picLeft").click(function(){
-    if(loaded==1){
-    	ind=ind-1
-    	if (ind<0){
-      		ind=images.length-1;
-    	}
-    	$("#showimage").attr('src',images2[ind]);
-    	$("#imgLink").attr('href',images[ind]);
-    }else{
-		  alert("Wait...");
-    }
-  });
-
-  $("#picRight").click(function(){
-    if(loaded==1){
-    	ind=ind+1
-    	if (ind==images.length){
-      		ind=0;
-    	}
-    	$("#showimage").attr('src',images2[ind]);
-    	$("#imgLink").attr('href',images[ind]);
-    }
+  $(".photos").slick({
+    arrows: false
   });
 });
 
