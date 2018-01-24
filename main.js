@@ -27,9 +27,9 @@ site.controller("mainController", function($scope, $window) {
 
   // Photos Carousel
   $scope.images = [
-    { thumb: "images/slideshow/bird2.jpg", full: "images/slideshow/bird.jpg",
+    { thumb: "images/slideshow/bird2.jpg", full: "images/slideshow/bird.JPG",
     desc: "This is a picture of a bird I took at the Biodome in Montreal. Quite a friendly chap"},
-    { thumb: "images/slideshow/cars2.jpg", full: "images/slideshow/cars.jpg",
+    { thumb: "images/slideshow/cars2.jpg", full: "images/slideshow/cars.JPG",
     desc: "Taken while on the road back from a Twilight track meet in Hamilton in Summer 2017." +
     " Added some noise because I thought it looked cool."},
     { thumb: "images/slideshow/hillside2.jpg", full: "images/slideshow/hillside.jpg",
