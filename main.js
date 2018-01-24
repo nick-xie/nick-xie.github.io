@@ -50,7 +50,7 @@ site.controller("mainController", function($scope, $window) {
     " midterm did not."},
     { thumb: "images/slideshow/mcgreen2.jpg", full: "images/slideshow/mcgreen.jpg",
     desc: "Walking back to my dorm from the math building after doing some homework in my first term at Waterloo."},
-    { thumb: "images/slideshow/kitchener2.jpg", full: "images/slideshow/kitchener1.jpg",
+    { thumb: "images/slideshow/kitchener2.jpg", full: "images/slideshow/kitchener.jpg",
     desc: "Picture of some of Kitchener's distinctive historical building style."}
   ];
   $scope.photosNext = function() {
