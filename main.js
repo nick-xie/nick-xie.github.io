@@ -1,22 +1,31 @@
-var site = angular.module('app',[]);
+var site = angular.module('app',['ngAnimate']);
 site.controller("mainController", function($scope, $window) {
-  $window.onload = function() {
-      $(".expanded").hide();
-      $(".collapsed").show();
-      $(".expanded2").hide();
-      $(".collapsed2").show();
+
+  // Menu bar click
+  $scope.scrollTo = function(className) {
+    scrollFunction(className);
+  };
+
+  // Media cards
+  $scope.showListen = false;
+  $scope.showWatch = false;
+
+  // Project Carousel
+  $scope.projectsSlideNum = 1;
+  $scope.projectsMaxSlides = 1;
+  $scope.projectsNext = function() {
+    $('.projects').slick('slickNext');
+    ++$scope.projectsSlideNum;
+    if ($scope.projectsSlideNum > $scope.projectsMaxSlides) $scope.projectsSlideNum = 1;
+  };
+
+  $scope.projectsPrev = function() {
+    $('.projects').slick('slickPrev');
+    --$scope.projectsSlideNum;
+    if ($scope.projectsSlideNum < 1) $scope.projectsSlideNum = $scope.projectsMaxSlides;
   };
 });
 
-// python -m SimpleHTTPServer to run locally with angular
-function myFunction() {
-    var x = document.getElementById("menu");
-    if (x.className === "mainmenu") {
-        x.className += " responsive";
-    } else {
-        x.className = "mainmenu";
-    }
-}
 var scrollFunction = function(idstring) {
   $('html, body').animate({
       scrollTop: $(idstring).offset().top
@@ -43,43 +52,8 @@ var loaded=1;
 // All onclick things
 $(document).ready(function (){
 
-  // -- Menu jump clicks
-  $("#aboutlink").click(function() {
-    scrollFunction(".about")
-  });
-  $("#projectlink").click(function() {
-    scrollFunction(".projects")
-  });
-  $("#bloglink").click(function() {
-    scrollFunction(".blog")
-  });
-  $("#contactlink").click(function() {
-    scrollFunction("#contactArea")
-  });
-
-  // -- Expandable media cards
-  $(".card").click(function(){
-    if (open==0){
-      open=1;
-      $(".expanded").show(500);
-      $(".collapsed").hide(500);
-    }else{
-      open=0;
-      $(".expanded").hide(500);
-      $(".collapsed").show(500);
-    }
-  });
-
-  $(".card2").click(function(){
-    if (open2==0){
-      open2=1;
-      $(".expanded2").show(500);
-      $(".collapsed2").hide(500);
-    }else{
-      open2=0;
-      $(".expanded2").hide(500);
-      $(".collapsed2").show(500);
-    }
+  $(".projects").slick({
+    arrows: false
   });
 
   // -- Picture viewer scroll
@@ -108,6 +82,8 @@ $(document).ready(function (){
   });
 });
 
+
+// ------------ MENU BAR SCROLL STUFF ------------
 var didScroll;
 $(window).scroll(function(event){
   didScroll=true;
@@ -132,7 +108,6 @@ function hasScrolled(){
   });
 }
 // Hide Header on on scroll down
-var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();

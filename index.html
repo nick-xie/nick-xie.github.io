@@ -21,15 +21,20 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <!-- Angular Stuff -->
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="css/slick/slick.min.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-messages.min.js"></script>
-  <!-- Angular Material Library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
   <script type="text/javascript" src="main.js"></script>
 
   <!-- Favicon
@@ -44,10 +49,10 @@
   <div class="row">
     <div class="four columns offset-by-four" style="margin-top: 5%">
       <ul class="mainmenu" id="menu">
-        <li id="aboutlink">about</li
-        ><li id="bloglink">blog</li
-        ><li id="projectlink">projects</li
-        ><li id="contactlink">contact</li>
+        <li ng-click="scrollTo('.about')">about</li
+        ><li ng-click="scrollTo('.blog')">blog</li
+        ><li ng-click="scrollTo('.projects')">projects</li
+        ><li ng-click="scrollTo('#contactArea')">contact</li>
       </ul>
     </div>
   </div>
@@ -78,21 +83,46 @@
       <div class="five columns" style="margin-top: 5%">
         <div ng-include="'about.html'"></div>
         <br><br><br>
-        <div ng-include="'blogbio.html'"></div>
-        <br><br><br>
-        <div ng-include="'projects.html'"></div>
+        <!-- Projects slider -->
+        <h4 class="projects">projects</h4>
+        <div style="text-align: center">
+          <button style="height: 100%" ng-click="projectsPrev()">
+            <a>
+              <h2 style="margin-bottom: 0">
+                <i class="fa fa-arrow-circle-left fa-4x"></i>
+              </h2>
+            </a>
+          </button>
+          <span style="color: white; font-size: 1.5em;">Slide {{ projectsSlideNum }}/{{ projectsMaxSlides }}</style>
+          <button style="height: 100%" ng-click="projectsNext()">
+            <a>
+              <h2 style="margin-bottom: 0">
+                <i class="fa fa-arrow-circle-right fa-4x"></i>
+              </h2>
+            </a>
+          </button>
+        </div>
+        <hr>
+        <section class="projects slider" id="projectSlider">
+          <div>
+            <div ng-include="'projects/avaron.html'"></div>
+          </div>
+        </section>
+        <hr>
       </div>
 
       <!-- Right hand side of page -->
-      <div class="six columns offset-by-one" id="media" style="margin-top: 1%">
+      <div class="six columns offset-by-one" id="media" style="margin-top: 5%">
 
-        <div class="card">
+        <div ng-include="'blogbio.html'"></div>
+
+        <div class="card" ng-click="showListen = !showListen">
           <h3>Something to listen to:</h3>
           <div ng-include="'listenRecommendations/current.html'"></div>
         </div>
         <br><br><br><br>
 
-        <div class="card2">
+        <div class="card" ng-click="showWatch = !showWatch">
           <h3>Something to watch:</h3>
           <div ng-include="'watchRecommendations/current.html'"></div>
         </div>
@@ -106,7 +136,6 @@
           <a href="images/slideshow/edited.jpg" target="_blank" id="imgLink">Click to open full image</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>

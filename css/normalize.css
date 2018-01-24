@@ -21,26 +21,48 @@ body {
   margin: 0;
 
 }
-/*Media Card*/
+
+button h2 {
+  color: white;
+}
+
+button i {
+  color: white;
+}
+
+button:hover h2 {
+  color: #f62f67;
+}
+
+button:hover i {
+  color: #f62f67;
+}
+
+button:focus {
+  outline: 0;
+}
+
+/* Media Card */
 .card {
-    box-shadow: 0 2em 4em 0 #494C4D;
-    transition: 0.5s;
-    background: rgba(0,0,0,0.6);
-    padding: 0.6em;
+  box-shadow: 0 2em 4em 0 #494C4D;
+  background: rgba(0,0,0,0.6);
+  padding: 0.6em;
 }
 
 .card:hover {
-    box-shadow: 0 8em 16em 0 #161717;
+  box-shadow: 0 8em 16em 0 #161717;
+  cursor: pointer;
 }
 
-.card2:hover {
-    box-shadow: 0 8em 16em 0 #161717;
+/* Media text transitions */
+.cardT.ng-hide-add,
+.cardT.ng-hide-remove {
+  transition: all ease-in-out 0.5s;
+  opacity: 1;
 }
-.card2 {
-    box-shadow: 0 2em 4em 0 #494C4D;
-    transition: 0.5s;
-    background: rgba(0,0,0,0.6);
-    padding: 0.6em;
+
+.cardT.ng-hide {
+  opacity: 0;
 }
 
 .pics:hover {
@@ -82,6 +104,18 @@ header {
 
 .nav-up {
   top: -12em;
+}
+
+/* Projects slider */
+#projectSlider h2 {
+  color: #f62f67;
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+}
+#projectSlider p {
+  color: white;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 
@@ -180,9 +214,6 @@ img.fade{
 }
 .contact button{
   height: 100%;
-}
-.contact button:hover h2{
-  color: #f62f67;
 }
 p.bigcenter{
   font-family: "montserratb";
