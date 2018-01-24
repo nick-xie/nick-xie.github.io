@@ -102,7 +102,6 @@
             </a>
           </button>
         </div>
-        <!-- <hr> -->
         <section class="projects slider" id="projectSlider">
           <div>
             <div ng-include="'projects/avaron.html'"></div>
@@ -129,6 +128,15 @@
 
         <div class="pics">
           <h3>Some photos I've taken</h3>
+          <section class="photos slider" id="photoSlider">
+            <div ng-repeat="photo in images">
+              <p>Photo: {{ $index+1 }}/{{ images.length }}</p><hr>
+              <p>{{ photo.desc }}</p>
+              <a href="{{ photo.full }}" target="_blank">
+                <img ng-src="{{ photo.thumb }}">
+              </a>
+            </div>
+          </section>
           <button style="height: 100%" ng-click="photosPrev()">
             <a>
               <h2 style="margin-bottom: 0">
@@ -143,16 +151,8 @@
               </h2>
             </a>
           </button>
-          <section class="photos slider" id="photoSlider">
-            <div ng-repeat="photo in images">
-              <p>Photo: {{ photo.num }}/{{ images.length }}</p>
-              <a href="{{ photo.full }}" target="_blank">
-                <img ng-src="{{ photo.thumb }}">
-              </a>
-            </div>
-          </section>
-          <p style="color: white">
-          Click on photo to open full image
+          <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
+          Click on photo to open full sized image
           </p>
         </div>
       </div>

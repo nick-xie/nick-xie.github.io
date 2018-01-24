@@ -99,16 +99,16 @@ header {
 }
 
 /* Photo slider */
-#photoSlider button {
-  font-size: 0.1em;
-  /*display: inline-flex;*/
-  /*margin-top: 0;*/
-}
 #photoSlider img {
-  /*margin-bottom: 0;*/
+  margin-bottom: 0.2em;
 }
 #photoSlider p {
   color: white;
+  margin-bottom: 0.2em;
+}
+#photoSlider hr {
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 /* HTML5 display definitions
