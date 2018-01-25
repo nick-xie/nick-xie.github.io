@@ -141,7 +141,7 @@
               <p>Photo: {{ $index+1 }}/{{ images.length }}</p><hr>
               <p>{{ photo.desc }}</p>
               <a href="{{ photo.full }}" target="_blank">
-                <img ng-src="{{ photo.thumb }}">
+                <img ng-src="{{ photo.thumb }}" ng-click="gEvent('ExternalClick', photo.full)">
               </a>
             </div>
           </section>
@@ -179,28 +179,28 @@
       <!-- Buttons -->
       <ul>
         <li>
-          <button>
+          <button ng-click="gEvent('ExternalClick','linkedin')">
             <a href="https://www.linkedin.com/in/nicholas-xie-351155147" target="_blank">
               <h2><i class="fa fa-linkedin-square"></i> LinkedIn</h2>
             </a>
           </button>
         </li>
         <li>
-          <button>
+          <button ng-click="gEvent('ExternalClick','github')">
             <a href="https://github.com/nick-xie" target="_blank">
               <h2><i class="fa fa-github"></i> Github</h2>
             </a>
           </button>
         </li>
         <li>
-          <button>
+          <button ng-click="gEvent('ExternalClick','resume')">
             <a href="images/newresume.pdf" target="_blank">
               <h2><i class="fa fa-file-text"></i> Resume</h2>
             </a>
           </button>
         </li>
         <li>
-          <button>
+          <button ng-click="gEvent('ExternalClick','youtube')">
             <a href="https://www.youtube.com/channel/UChzu7_kN6J6ZGxrdoA9kgjw" target="_blank">
               <h2><i class="fa fa-youtube-play"></i> YouTube</h2>
             </a>

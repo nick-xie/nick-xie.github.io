@@ -6,6 +6,13 @@ site.controller("mainController", function($scope, $window) {
     scrollFunction(className);
   };
 
+  // gEvent
+  $scope.gEvent = function(category, action) {
+    gtag('event', action, {
+      'event_category': category
+    });
+  };
+
   // Media cards
   $scope.showListen = false;
   $scope.showWatch = false;
