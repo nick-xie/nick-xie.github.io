@@ -62,14 +62,14 @@ button:focus {
 }
 
 .pics:hover {
-    box-shadow: 0 8em 16em 0 #161717;
+  box-shadow: 0 8em 16em 0 #161717;
 }
 .pics {
-    box-shadow: 0 2em 4em 0 #494C4D;
-    transition: 0.5s;
-    background: rgba(0,0,0,0.6);
-    padding: 0.6em;
-    text-align: center;
+  box-shadow: 0 2em 4em 0 #494C4D;
+  transition: 0.5s;
+  background: rgba(0,0,0,0.6);
+  padding: 0.6em;
+  text-align: center;
 }
 
 /*menu thing*/
