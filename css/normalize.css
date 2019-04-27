@@ -1,15 +1,15 @@
 /*fonts*/
 @font-face {
-     font-family: "montserrat";
-     src: url('thin.otf') format("opentype");
+  font-family: "montserrat";
+  src: url("thin.otf") format("opentype");
 }
 @font-face {
-     font-family: "montserratR";
-     src: url('montserrat.otf') format("opentype");
+  font-family: "montserratR";
+  src: url("montserrat.otf") format("opentype");
 }
-@font-face{
-     font-family: "montserratb";
-     src: url('montserratb.otf') format("opentype");
+@font-face {
+  font-family: "montserratb";
+  src: url("montserratb.otf") format("opentype");
 }
 html {
   font-family: "montserrat"; /* 1 */
@@ -40,17 +40,24 @@ button:focus {
 
 /* Media Card */
 .card {
-  box-shadow: 0 2em 4em 0 #494C4D;
-  background: rgba(0,0,0,0.6);
+  box-shadow: 0 1em 2em 0 #494c4d;
+  background: #515151;
+  transition: 0.5s;
   padding: 0.6em;
+  margin-bottom: 5em;
+  border-radius: 10px;
+}
+.card:last-of-type {
+  margin-bottom: 0;
 }
 
 .card:hover {
-  box-shadow: 0 8em 16em 0 #161717;
+  background: #2d2d2d;
+  box-shadow: 0 2em 4em 0 #161717;
   cursor: pointer;
 }
 
-/* Media text transitions */
+/* Media text transitions, cardT is for the card text */
 .cardT.ng-hide-add,
 .cardT.ng-hide-remove {
   transition: all ease-in-out 0.5s;
@@ -63,13 +70,16 @@ button:focus {
 
 .pics:hover {
   box-shadow: 0 8em 16em 0 #161717;
+  background: #2d2d2d;
 }
 .pics {
-  box-shadow: 0 2em 4em 0 #494C4D;
+  box-shadow: 0 2em 4em 0 #494c4d;
   transition: 0.5s;
-  background: rgba(0,0,0,0.6);
+  background: #515151;
   padding: 0.6em;
   text-align: center;
+  margin-bottom: 10em;
+  border-radius: 10px;
 }
 
 /*menu thing*/
@@ -113,8 +123,8 @@ header {
 
 /* HTML5 display definitions
    ========================================================================== */
-.mainmenu{
-/*  float: left;*/
+.mainmenu {
+  /*  float: left;*/
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -134,92 +144,92 @@ ul.mainmenu li {
   text-decoration: none;
 }
 /* Change background color of links on hover */
-.mainmenu li:hover{
+.mainmenu li:hover {
   background: white;
   cursor: pointer;
 }
-.fade{
+.fade {
   opacity: 0;
 }
-img.fade{
+img.fade {
   outline: 0;
   max-width: 100%;
   height: auto;
 }
-.about h4{
+.about h4 {
   color: #f62f67;
   text-align: center;
   font-family: "montserrat";
 }
-.content h4{
+.content h4 {
   color: #f62f67;
   text-align: center;
   font-family: "montserrat";
 }
-.content h3{
+.content h3 {
   color: white;
   text-align: center;
   font-family: "montserrat";
 }
-.content h2{
+.content h2 {
   font-size: 1.3em;
-  color: #A5A8C4;
+  color: #a5a8c4;
   text-align: center;
   line-height: 1.5em;
   font-family: "montserrat";
 }
-.content h2 a{
+.content h2 a {
   color: #767785;
   text-decoration: none;
 }
-.content a{
+.content a {
   text-decoration: none;
 }
-.projects h4{
+.projects h4 {
   color: #f62f67;
   text-align: center;
   font-family: "montserrat";
 }
-.contact h2{
+.contact h2 {
   color: white;
   margin-bottom: 0;
   text-transform: none;
   text-align: center;
   font-weight: 100 !important;
 }
-.contact h3{
+.contact h3 {
   color: white;
   text-align: center;
   font-family: "montserrat";
 }
-.contact h4{
+.contact h4 {
   color: #f62f67;
   text-align: center;
   font-family: "montserrat";
 }
-.contact ul{
+.contact ul {
   text-align: center;
 }
-.contact ul li{
+.contact ul li {
   list-style: none;
   display: inline-block;
 }
-.contact button{
+.contact button {
   height: 100%;
 }
-p.bigcenter{
+p.bigcenter {
   font-family: "montserratb";
   text-align: center;
   color: white;
   font-size: 8.3em;
 }
-p.meat{
+p.meat {
   /*-webkit-text-stroke: 0.02em #2F3436;*/
   color: white;
   font-size: 1.5em;
   text-align: center;
 }
-.footer{
+.footer {
   padding-bottom: 2em;
   text-align: center;
   font-size: 0.4em;
@@ -227,7 +237,7 @@ p.meat{
   text-decoration: none;
   background-color: #3a3e3f;
 }
-#contactArea a{
+#contactArea a {
   text-decoration: none;
 }
 /* Style the links inside the list items
@@ -402,7 +412,8 @@ sub {
 /*img {
   border: 0;
 }*/
-img, img.scale-with-grid{
+img,
+img.scale-with-grid {
   outline: 0;
   max-width: 100%;
   height: auto;

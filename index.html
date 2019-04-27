@@ -122,56 +122,55 @@
 
         <div ng-include="'blogbio.html'"></div>
 
-        <div class="card" ng-click="showListen = !showListen">
-          <h3>Something to listen to:</h3>
-          <div ng-include="'listenRecommendations/current.html'"></div>
-        </div>
-        <br><br><br><br>
+        <div class="cardColumn">
+          <div class="card" ng-click="showListen = !showListen">
+            <h3>Something to listen to:</h3>
+            <div ng-include="'listenRecommendations/current.html'"></div>
+          </div>
 
-        <div class="card" ng-click="showWatch = !showWatch">
-          <h3>Something to watch:</h3>
-          <div ng-include="'watchRecommendations/current.html'"></div>
-        </div>
-        <br><br><br><br>
+          <div class="card" ng-click="showWatch = !showWatch">
+            <h3>Something to watch:</h3>
+            <div ng-include="'watchRecommendations/current.html'"></div>
+          </div>
 
-        <div class="pics">
-          <h3>Some photos I've taken</h3>
-          <section class="photos slider" id="photoSlider">
-            <div ng-repeat="photo in images">
-              <p>Photo: {{ $index+1 }}/{{ images.length }}</p><hr>
-              <p>{{ photo.desc }}</p>
-              <a href="{{ photo.full }}" target="_blank">
-                <img ng-src="{{ photo.thumb }}" ng-click="gEvent('ExternalClick', photo.full)">
+          <div class="pics">
+            <h3>Some photos I've taken</h3>
+            <button style="height: 100%" ng-click="photosPrev()">
+              <a>
+                <h2 style="margin-bottom: 0">
+                  <i class="fa fa-long-arrow-left fa-3x"></i>
+                </h2>
               </a>
-            </div>
-          </section>
-          <button style="height: 100%" ng-click="photosPrev()">
-            <a>
-              <h2 style="margin-bottom: 0">
-                <i class="fa fa-long-arrow-left fa-3x"></i>
-              </h2>
-            </a>
-          </button>
-          <button style="height: 100%" ng-click="photosNext()">
-            <a>
-              <h2 style="margin-bottom: 0">
-                <i class="fa fa-long-arrow-right fa-3x"></i>
-              </h2>
-            </a>
-          </button>
-          <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
-          Click on photo to open full sized image
-          </p>
-        </div>
-        <br><br><br><br>
+            </button>
+            <button style="height: 100%" ng-click="photosNext()">
+              <a>
+                <h2 style="margin-bottom: 0">
+                  <i class="fa fa-long-arrow-right fa-3x"></i>
+                </h2>
+              </a>
+            </button>
+            <section class="photos slider" id="photoSlider">
+              <div ng-repeat="photo in images">
+                <p>Photo: {{ $index+1 }}/{{ images.length }}</p><hr>
+                <p>{{ photo.desc }}</p>
+                <a href="{{ photo.full }}" target="_blank">
+                  <img ng-src="{{ photo.thumb }}" ng-click="gEvent('ExternalClick', photo.full)">
+                </a>
+              </div>
+            </section>            
+            <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
+            Click on photo to open full sized image
+            </p>
+          </div>
 
-        <a href="favourites.html" target="_blank">
-        <div class="card">
-          <h3>Some of my favourites</h3>
-          <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
-          Click me to go see some of my favourite movies, music, etc</p>
+          <a href="favourites.html" target="_blank">
+          <div class="card">
+            <h3>Some of my favourites</h3>
+            <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
+            Click me to go see some of my favourite movies, music, etc</p>
+          </div>
+          </a>
         </div>
-        </a>
       </div>
     </div>
   </div>
