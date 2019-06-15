@@ -1,0 +1,71 @@
+<!-- Top of page header -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-top: 10%">
+        <p class="bigcenter">Hi! I'm Nick.</p>
+      </div>
+      <div class="eight columns offset-by-two" style="margin-top: 10%">
+        <img src="images/crop.jpg" class="fade" title="me" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div style="margin-top: 5%" ng-include="'about.html'"></div>
+      <h4>more about me (click/tap to open)</h4>
+      <!-- Descriptions and links to other widgets -->
+      <div class="widgets">
+        <div class="row">
+          <a
+            href="blog"
+            ng-click="gEvent('ExternalClick','blog')"
+            target="_blank"
+          >
+            <div class="widget">
+              <p>Blog <i class="fas fa-book"></i></p>
+              <hr />
+              <span
+                >Not a ton of consistency or volume, but I like writing
+                things</span
+              >
+            </div></a
+          >
+          <!-- <div class="widget">
+            <p>Projects <i class="fas fa-wrench"></i></p>
+            <hr />
+            <span>See some stuff I've made</span>
+          </div> -->
+          <a href="/photos" ng-class="{ curMenuItem: active == 'photos' }">
+            <div class="widget">
+              <p>Photography <i class="fas fa-camera-retro"></i></p>
+              <hr />
+              <span>An incredibly amateur collection of pictures</span>
+            </div>
+          </a>
+          <a href="favourites.html" target="_blank">
+            <div class="widget">
+              <p>Classical Music <i class="fas fa-music"></i></p>
+              <hr />
+              <span>Some of my favourite classical music works</span>
+            </div></a
+          >
+        </div>
+      </div>
+
+      <!-- <div class="card" ng-click="showListen = !showListen">
+        <h3>Something to listen to:</h3>
+        <div ng-include="'listenRecommendations/current.html'"></div>
+      </div>
+
+      <div class="card" ng-click="showWatch = !showWatch">
+        <h3>Something to watch:</h3>
+        <div ng-include="'watchRecommendations/current.html'"></div>
+      </div> -->
+    </div>
+  </div>
+</section>

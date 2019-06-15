@@ -1,0 +1,49 @@
+p {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 2em;
+}
+p.bigcenter {
+  font-family: "montserratb";
+  text-align: center;
+  color: white;
+  font-size: 8.3em;
+}
+
+h4 {
+  color: #f62f67;
+  text-align: center;
+  font-family: "montserrat";
+}
+
+.widget {
+  padding: 10px 0;
+  box-shadow: 0 1em 2em 0 #494c4d;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+  border-radius: 4px;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+}
+.widget p {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.widget span {
+  font-size: 1em;
+}
+.widget:hover {
+  box-shadow: 0 4em 8em 0 #161717;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+.widget hr {
+  font-size: 0.8em;
+  margin: auto;
+  width: 80%;
+}

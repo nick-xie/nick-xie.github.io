@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="mainController">
-<head>
-
-  <!-- Basic Page Needs
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Nick Xie</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Nick Xie</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Analytics
+    <!-- Google Analytics
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113083884-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-113083884-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'UA-113083884-1');
-  </script>
+      gtag("config", "UA-113083884-1");
+    </script>
 
-
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
 
-  <!-- JS
+    <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script> -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="css/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="css/slick/slick.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
 
-  <script type="text/javascript" src="main.js"></script>
+    <script type="module" src="main.js"></script>
 
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="images/icon.png" />
+  </head>
+  <body id="top">
+    <base href="/" />
+    <!-- Menu -->
+    <header>
+      <div class="mainmenu" style="margin-top: 5%;">
+        <ul id="menu">
+          <a href="/" ng-class="{ curMenuItem: active == 'home' }"
+            ><li>home</li></a
+          >
+          <a href="/blog" target="_blank"><li>blog</li></a>
+          <!-- <a href="/projects"><li>projects</li></a> -->
 
-</head>
-<body>
+          <a href="/photos" ng-class="{ curMenuItem: active == 'photos' }"
+            ><li>photos</li></a
+          >
+          <a ng-click="scrollTo('#contactArea')"><li>contact</li></a>
+        </ul>
+      </div>
+    </header>
 
-<!-- Menu -->
-<header class="nav-down">
-  <div class="row">
-    <div class="four columns offset-by-four" style="margin-top: 5%">
-      <ul class="mainmenu" id="menu">
-        <li ng-click="scrollTo('.about')">about</li
-        ><li ng-click="scrollTo('.blog')">blog</li
-        ><li ng-click="scrollTo('.projects')">projects</li
-        ><li ng-click="scrollTo('#contactArea')">contact</li>
-      </ul>
-    </div>
-  </div>
-</header>
-
-<!-- Top of page header -->
-<section>
+    <div ng-view></div>
+    <!-- Top of page header -->
+    <!-- <section>
   <div class="container">
     <div class="row">
       <div class="ten columns offset-by-one" style="margin-top: 10%">
@@ -80,19 +97,19 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<!-- Main content -->
-<section class="content">
+    <!-- Main content -->
+    <!-- <section class="content">
   <div class="container">
-    <div class="row">
+    <div class="row"> -->
 
-      <!-- Left hand side of page -->
-      <div class="five columns" style="margin-top: 5%">
+    <!-- Left hand side of page -->
+    <!-- <div class="five columns" style="margin-top: 5%">
         <div ng-include="'about.html'"></div>
-        <br><br><br>
-        <!-- Projects slider -->
-        <h4 class="projects">projects</h4>
+        <br><br><br> -->
+    <!-- Projects slider -->
+    <!-- <h4 class="projects">projects</h4>
         <div style="text-align: center">
           <button style="height: 100%" ng-click="projectsPrev()">
             <a>
@@ -115,10 +132,10 @@
             <div ng-include="'projects/avaron.html'"></div>
           </div>
         </section>
-      </div>
+      </div> -->
 
-      <!-- Right hand side of page -->
-      <div class="six columns offset-by-one" id="media" style="margin-top: 5%">
+    <!-- Right hand side of page -->
+    <!-- <div class="six columns offset-by-one" id="media" style="margin-top: 5%">
 
         <div ng-include="'blogbio.html'"></div>
 
@@ -174,58 +191,62 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<!-- Contact -->
-<section class="contact" id="contactArea">
-  <div class="row" style="margin-top: 5%">
-  <h4>contact</h4>
-    <a href="mailto:nickxie.me@gmail.com?Subject=Hello!" target="_top">
-      <h3><i class="fa fa-envelope"></i> nickxie.me@gmail.com</h3>
-    </a>
-    <div class="eight columns offset-by-two" style="margin-bottom: 3%">
-      <!-- Buttons -->
-      <ul>
-        <li>
-          <button ng-click="gEvent('ExternalClick','linkedin')">
-            <a href="https://www.linkedin.com/in/nicholas-xie-351155147" target="_blank">
-              <h2><i class="fa fa-linkedin-square"></i> LinkedIn</h2>
-            </a>
-          </button>
-        </li>
-        <li>
-          <button ng-click="gEvent('ExternalClick','github')">
-            <a href="https://github.com/nick-xie" target="_blank">
-              <h2><i class="fa fa-github"></i> Github</h2>
-            </a>
-          </button>
-        </li>
-        <li>
-          <button ng-click="gEvent('ExternalClick','resume')">
-            <a href="images/resume.pdf" target="_blank">
-              <h2><i class="fa fa-file-text"></i> Resume</h2>
-            </a>
-          </button>
-        </li>
-        <li>
-          <button ng-click="gEvent('ExternalClick','youtube')">
-            <a href="https://www.youtube.com/channel/UChzu7_kN6J6ZGxrdoA9kgjw" target="_blank">
-              <h2><i class="fa fa-youtube-play"></i> YouTube</h2>
-            </a>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <!-- Contact -->
+    <section class="contact" id="contactArea">
+      <div class="row" style="margin-top: 5%">
+        <h4>contact</h4>
+        <a href="mailto:nickxie.me@gmail.com?Subject=Hello!" target="_top">
+          <h3><i class="fa fa-envelope"></i> nickxie.me@gmail.com</h3>
+        </a>
+        <div class="eight columns offset-by-two" style="margin-bottom: 3%">
+          <!-- Buttons -->
+          <ul>
+            <li>
+              <button ng-click="gEvent('ExternalClick','linkedin')">
+                <a
+                  href="https://www.linkedin.com/in/nicholas-xie"
+                  target="_blank"
+                >
+                  <h2><i class="fab fa-linkedin"></i> LinkedIn</h2>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button ng-click="gEvent('ExternalClick','github')">
+                <a href="https://github.com/nick-xie" target="_blank">
+                  <h2><i class="fab fa-github"></i> Github</h2>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button ng-click="gEvent('ExternalClick','resume')">
+                <a href="images/resume.pdf" target="_blank">
+                  <h2><i class="fas fa-file-alt"></i> Resume</h2>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button ng-click="gEvent('ExternalClick','youtube')">
+                <a
+                  href="https://www.youtube.com/channel/UChzu7_kN6J6ZGxrdoA9kgjw"
+                  target="_blank"
+                >
+                  <h2><i class="fab fa-youtube"></i> YouTube</h2>
+                </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<!-- Footer -->
-<section class="footer">
-  <div class="row">
-    <div class="twelve columns" style="margin-top: 3%">
-    </div>
-  </div>
-</section>
-
-</body>
+    <!-- Footer -->
+    <section class="footer">
+      <div class="row">
+        <div class="twelve columns" style="margin-top: 3%"></div>
+      </div>
+    </section>
+  </body>
 </html>

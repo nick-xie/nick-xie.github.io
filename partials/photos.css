@@ -1,0 +1,38 @@
+.intro {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.pictureContainer {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.pictureContainer .frame {
+  width: 20em;
+  color: white;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.pictureContainer .frame p {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1em;
+}
+
+img {
+  width: 20em;
+  height: 20em;
+  object-fit: contain;
+  border: 1px solid white;
+  background-color: black;
+}

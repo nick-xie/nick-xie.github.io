@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  padding-top: 9em;
+  box-sizing: border-box;
 }
 
 button h2 {
@@ -36,36 +36,6 @@ button:hover i {
 }
 button:focus {
   outline: 0;
-}
-
-/* Media Card */
-.card {
-  box-shadow: 0 1em 2em 0 #494c4d;
-  background: #515151;
-  transition: 0.5s;
-  padding: 0.6em;
-  margin-bottom: 5em;
-  border-radius: 10px;
-}
-.card:last-of-type {
-  margin-bottom: 0;
-}
-
-.card:hover {
-  background: #2d2d2d;
-  box-shadow: 0 2em 4em 0 #161717;
-  cursor: pointer;
-}
-
-/* Media text transitions, cardT is for the card text */
-.cardT.ng-hide-add,
-.cardT.ng-hide-remove {
-  transition: all ease-in-out 0.5s;
-  opacity: 1;
-}
-
-.cardT.ng-hide {
-  opacity: 0;
 }
 
 .pics:hover {
@@ -85,15 +55,47 @@ button:focus {
 /*menu thing*/
 header {
   z-index: 1;
-  height: 9em;
   position: fixed;
-  top: 0;
-  transition: top 0.4s ease-in-out;
-  width: 100%;
+  transition: all 0.4s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hideNav {
+  transform: translate(-210px, -100px);
 }
 
-.nav-up {
-  top: -12em;
+.mainmenu ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.mainmenu ul a {
+  /*background: #464B4D;*/
+  background-color: #3a3e3f;
+  padding: 1em 1.2em 1em 1.2em;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  transition: 0.4s;
+}
+.mainmenu ul a li {
+  text-decoration: none;
+  color: #f62f67;
+  margin-bottom: 0;
+}
+.mainmenu ul a:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.mainmenu ul a:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.mainmenu a:hover {
+  background: white;
+  cursor: pointer;
+}
+.curMenuItem {
+  background-color: white !important;
 }
 
 /* Projects slider */
@@ -123,31 +125,6 @@ header {
 
 /* HTML5 display definitions
    ========================================================================== */
-.mainmenu {
-  /*  float: left;*/
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 100%;
-  height: auto;
-}
-ul.mainmenu {
-  list-style: none;
-}
-/* Float the list items side by side */
-ul.mainmenu li {
-  /*background: #464B4D;*/
-  background-color: #3a3e3f;
-  color: #f62f67;
-  display: inline-block;
-  padding: 1em 1.2em 1em 1.2em;
-  text-decoration: none;
-}
-/* Change background color of links on hover */
-.mainmenu li:hover {
-  background: white;
-  cursor: pointer;
-}
 .fade {
   opacity: 0;
 }
@@ -155,16 +132,6 @@ img.fade {
   outline: 0;
   max-width: 100%;
   height: auto;
-}
-.about h4 {
-  color: #f62f67;
-  text-align: center;
-  font-family: "montserrat";
-}
-.content h4 {
-  color: #f62f67;
-  text-align: center;
-  font-family: "montserrat";
 }
 .content h3 {
   color: white;
@@ -184,11 +151,6 @@ img.fade {
 }
 .content a {
   text-decoration: none;
-}
-.projects h4 {
-  color: #f62f67;
-  text-align: center;
-  font-family: "montserrat";
 }
 .contact h2 {
   color: white;
@@ -216,18 +178,7 @@ img.fade {
 }
 .contact button {
   height: 100%;
-}
-p.bigcenter {
-  font-family: "montserratb";
-  text-align: center;
-  color: white;
-  font-size: 8.3em;
-}
-p.meat {
-  /*-webkit-text-stroke: 0.02em #2F3436;*/
-  color: white;
-  font-size: 1.5em;
-  text-align: center;
+  transition: 0.4s;
 }
 .footer {
   padding-bottom: 2em;

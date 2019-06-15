@@ -1,0 +1,35 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-top: 10%">
+        <h4 class="intro">
+          Hey, check out some of my pics below. You can click on any of them to
+          get the full sized image.
+          <br />
+          I don't update these nearly often enough so feel free to follow me on
+          Instagram
+          <a href="https://www.instagram.com/_nick_xie_/" target="_blank"
+            >@_nick_xie_</a
+          >
+          for another source of rarely updated pics.
+        </h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container pictureContainer">
+    <div ng-repeat="photo in pics">
+      <a href="{{ photo.full }}" target="_blank">
+        <div class="frame">
+          <img
+            ng-src="{{ photo.thumb }}"
+            ng-click="gEvent('ExternalClick', photo.full)"
+          />
+          <p>{{ photo.desc }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

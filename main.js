@@ -1,6 +1,45 @@
-var site = angular.module('app',['ngAnimate']);
-site.controller("mainController", function($scope, $window) {
+import pics from "./content-data/pics.js";
 
+var site = angular.module("app", ["ngAnimate", "ngRoute"]);
+// credit to tenisgent for the following directive for injecting css
+// https://stackoverflow.com/questions/15193492/how-to-include-view-partial-specific-styling-in-angularjs
+site.directive("head", [
+  "$rootScope",
+  "$compile",
+  function($rootScope, $compile) {
+    return {
+      restrict: "E",
+      link: function(scope, elem) {
+        var html =
+          '<link rel="stylesheet" ng-repeat="(routeCtrl, cssUrl) in routeStyles" ng-href="{{cssUrl}}" />';
+        elem.append($compile(html)(scope));
+        scope.routeStyles = {};
+        $rootScope.$on("$routeChangeStart", function(e, next, current) {
+          if (current && current.$$route && current.$$route.css) {
+            if (!angular.isArray(current.$$route.css)) {
+              current.$$route.css = [current.$$route.css];
+            }
+            angular.forEach(current.$$route.css, function(sheet) {
+              delete scope.routeStyles[sheet];
+            });
+          }
+          if (next && next.$$route && next.$$route.css) {
+            if (!angular.isArray(next.$$route.css)) {
+              next.$$route.css = [next.$$route.css];
+            }
+            angular.forEach(next.$$route.css, function(sheet) {
+              scope.routeStyles[sheet] = sheet;
+            });
+          }
+        });
+      }
+    };
+  }
+]);
+
+site.controller("mainController", function($scope, $rootScope) {
+  $rootScope.active = "home";
+  scrollFunction("#top");
   // Menu bar click
   $scope.scrollTo = function(className) {
     scrollFunction(className);
@@ -8,8 +47,8 @@ site.controller("mainController", function($scope, $window) {
 
   // gEvent
   $scope.gEvent = function(category, action) {
-    gtag('event', action, {
-      'event_category': category
+    gtag("event", action, {
+      event_category: category
     });
   };
 
@@ -21,120 +60,120 @@ site.controller("mainController", function($scope, $window) {
   $scope.projectsSlideNum = 1;
   $scope.projectsMaxSlides = 1;
   $scope.projectsNext = function() {
-    $('.projects').slick('slickNext');
+    $(".projects").slick("slickNext");
     ++$scope.projectsSlideNum;
-    if ($scope.projectsSlideNum > $scope.projectsMaxSlides) $scope.projectsSlideNum = 1;
+    if ($scope.projectsSlideNum > $scope.projectsMaxSlides)
+      $scope.projectsSlideNum = 1;
   };
 
   $scope.projectsPrev = function() {
-    $('.projects').slick('slickPrev');
+    $(".projects").slick("slickPrev");
     --$scope.projectsSlideNum;
-    if ($scope.projectsSlideNum < 1) $scope.projectsSlideNum = $scope.projectsMaxSlides;
+    if ($scope.projectsSlideNum < 1)
+      $scope.projectsSlideNum = $scope.projectsMaxSlides;
   };
 
   // Photos Carousel
-  $scope.images = [
-    { thumb: "images/slideshow/bird2.jpg", full: "images/slideshow/bird.JPG",
-    desc: "This is a picture of a bird I took at the Biodome in Montreal. Quite a friendly chap"},
-    { thumb: "images/slideshow/cars2.jpg", full: "images/slideshow/cars.JPG",
-    desc: "Taken while on the road back from a Twilight track meet in Hamilton in Summer 2017." +
-    " Added some noise because I thought it looked cool."},
-    { thumb: "images/slideshow/hillside2.jpg", full: "images/slideshow/hillside.jpg",
-    desc: "Basic girl photo at Hillside Music Festival 2017. Performer pictured is Cœur de pirate."},
-    { thumb: "images/slideshow/hillsidesunset2.jpg", full: "images/slideshow/hillsidesunset.jpg",
-    desc: "Sunset at Hillside. Fun fact: I left this photo totally unedited! (serious)"},
-    { thumb: "images/slideshow/path2.jpg", full: "images/slideshow/path.jpg",
-    desc: "Some foggy morning walking from my dorm to class in my first year at Waterloo."},
-    { thumb: "images/slideshow/edited2.jpg", full: "images/slideshow/edited.jpg",
-    desc: "At Liujiazui in Shanghai. One of my favourite places in the whole world."},
-    { thumb: "images/slideshow/bridge2.jpg", full: "images/slideshow/bridge.jpg",
-    desc: "Went on a bike ride through Suzhou's alleys with some friends this day. We stopped by this bridge to" +
-    " admire the beauty."},
-    { thumb: "images/slideshow/sunset2.jpg", full: "images/slideshow/sunset.jpg",
-    desc: "Super nice sunset by the Boathouse in my hometown. I've spent many evenings here throughout my life."},
-    { thumb: "images/slideshow/mc2.jpg", full: "images/slideshow/mc.jpg",
-    desc: "Picture of the math building at Waterloo one night coming back from a midterm. Picture turned out great," +
-    " midterm did not."},
-    { thumb: "images/slideshow/mcgreen2.jpg", full: "images/slideshow/mcgreen.jpg",
-    desc: "Walking back to my dorm from the math building after doing some homework in my first term at Waterloo."},
-    { thumb: "images/slideshow/kitchener2.jpg", full: "images/slideshow/kitchener.jpg",
-    desc: "Picture of some of Kitchener's distinctive historical building style."}
-  ];
+  $scope.images = pics;
   $scope.photosNext = function() {
-    $('.photos').slick('slickNext');
+    $(".photos").slick("slickNext");
   };
 
   $scope.photosPrev = function() {
-    $('.photos').slick('slickPrev');
+    $(".photos").slick("slickPrev");
   };
 });
 
+site.controller("photosController", function($scope, $rootScope) {
+  $rootScope.active = "photos";
+  $scope.pics = pics;
+  scrollFunction("#top");
+});
+
+site.config([
+  "$locationProvider",
+  function($locationProvider) {
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix("");
+  }
+]);
+
+site.config(function($routeProvider) {
+  $routeProvider
+    .when("/", {
+      templateUrl: "partials/home.html",
+      controller: "mainController",
+      css: "partials/home.css"
+    })
+    .when("/projects", {
+      templateUrl: "partials/home.html",
+      controller: "mainController",
+      css: "partials/home.css"
+    })
+    .when("/photos", {
+      templateUrl: "partials/photos.html",
+      controller: "photosController",
+      css: "partials/photos.css"
+    })
+    .otherwise({
+      redirectTo: "/"
+    });
+});
+
 var scrollFunction = function(idstring) {
-  $('html, body').animate({
-    scrollTop: $(idstring).offset().top
-  }, 400);
+  $("html, body").animate(
+    {
+      scrollTop: $(idstring).offset().top
+    },
+    400
+  );
 };
 
-$(document).ready(function (){
-
-  // Carousels
-  $(".projects").slick({
-    arrows: false
-  });
-
-  $(".photos").slick({
-    arrows: false,
-    adaptiveHeight: true
-  });
-});
-
-
 // ------------ MENU BAR SCROLL STUFF ------------
-var didScroll;
-$(window).scroll(function(event){
-  didScroll=true;
+var didScroll = false;
+$(window).scroll(function(event) {
+  didScroll = true;
 });
 
-setInterval(function(){
-  if(didScroll){
+setInterval(function() {
+  if (didScroll) {
     hasScrolled();
     hasScrolledT();
-    didScroll=false;
+    didScroll = false;
   }
 }, 150);
 
-function hasScrolled(){
-  $('.fade').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > (bottom_of_object/1.4) ){
-          $(this).animate({'opacity':'1'},1800);
-      }
+function hasScrolled() {
+  $(".fade").each(function(i) {
+    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    /* If the object is completely visible in the window, fade it it */
+    if (bottom_of_window > bottom_of_object / 1.4) {
+      $(this).animate({ opacity: "1" }, 1000);
+    }
   });
 }
 // Hide Header on on scroll down
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('header').outerHeight();
+var navbarHeight = $("header").outerHeight();
 function hasScrolledT() {
-    var st = $(this).scrollTop();
+  var st = $(window).scrollTop();
 
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+  // Make sure they scroll more than delta
+  if (Math.abs(lastScrollTop - st) <= delta) return;
 
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('header').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
-        }
+  // If they scrolled down and are past the navbar, add class .nav-up.
+  // This is necessary so you never see what is "behind" the navbar.
+  if (st > lastScrollTop && st > navbarHeight) {
+    // Scroll Down
+    $("header").addClass("hideNav");
+  } else {
+    // Scroll Up
+    if (st + $(window).height() < $(document).height()) {
+      $("header").removeClass("hideNav");
     }
+  }
 
-    lastScrollTop = st;
+  lastScrollTop = st;
 }
