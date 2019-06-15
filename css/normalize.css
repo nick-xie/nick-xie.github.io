@@ -38,20 +38,6 @@ button:focus {
   outline: 0;
 }
 
-.pics:hover {
-  box-shadow: 0 8em 16em 0 #161717;
-  background: #2d2d2d;
-}
-.pics {
-  box-shadow: 0 2em 4em 0 #494c4d;
-  transition: 0.5s;
-  background: #515151;
-  padding: 0.6em;
-  text-align: center;
-  margin-bottom: 10em;
-  border-radius: 10px;
-}
-
 /*menu thing*/
 header {
   z-index: 1;
@@ -61,7 +47,7 @@ header {
   transform: translateX(-50%);
 }
 .hideNav {
-  transform: translate(-210px, -100px);
+  opacity: 0;
 }
 
 .mainmenu ul {
@@ -96,31 +82,6 @@ header {
 }
 .curMenuItem {
   background-color: white !important;
-}
-
-/* Projects slider */
-#projectSlider h2 {
-  color: #f62f67;
-  font-size: 1.6em;
-  margin-bottom: 0.2em;
-}
-#projectSlider p {
-  color: white;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-/* Photo slider */
-#photoSlider img {
-  margin-bottom: 0.2em;
-}
-#photoSlider p {
-  color: white;
-  margin-bottom: 0.2em;
-}
-#photoSlider hr {
-  margin-bottom: 1em;
-  margin-top: 1em;
 }
 
 /* HTML5 display definitions
@@ -191,16 +152,6 @@ img.fade {
 #contactArea a {
   text-decoration: none;
 }
-/* Style the links inside the list items
-ul.topnav li a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-}*/
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.

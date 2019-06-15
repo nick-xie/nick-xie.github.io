@@ -32,7 +32,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
 
     <link
       rel="stylesheet"
@@ -50,7 +49,6 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-    <script type="text/javascript" src="css/slick/slick.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
@@ -74,7 +72,7 @@
           <a href="/blog" target="_blank"><li>blog</li></a>
           <!-- <a href="/projects"><li>projects</li></a> -->
 
-          <a href="/photos" ng-class="{ curMenuItem: active == 'photos' }"
+          <a href="/#/photos" ng-class="{ curMenuItem: active == 'photos' }"
             ><li>photos</li></a
           >
           <a ng-click="scrollTo('#contactArea')"><li>contact</li></a>
@@ -83,115 +81,6 @@
     </header>
 
     <div ng-view></div>
-    <!-- Top of page header -->
-    <!-- <section>
-  <div class="container">
-    <div class="row">
-      <div class="ten columns offset-by-one" style="margin-top: 10%">
-        <p class="bigcenter">Hi! I'm Nick.</p>
-      </div>
-      <div class="eight columns offset-by-two" style="margin-top: 10%">
-        <img src="images/crop.jpg" class="fade" title="me">
-      </div>
-      <div class="six columns offset-by-three" style="margin-top: 5%">
-      </div>
-    </div>
-  </div>
-</section> -->
-
-    <!-- Main content -->
-    <!-- <section class="content">
-  <div class="container">
-    <div class="row"> -->
-
-    <!-- Left hand side of page -->
-    <!-- <div class="five columns" style="margin-top: 5%">
-        <div ng-include="'about.html'"></div>
-        <br><br><br> -->
-    <!-- Projects slider -->
-    <!-- <h4 class="projects">projects</h4>
-        <div style="text-align: center">
-          <button style="height: 100%" ng-click="projectsPrev()">
-            <a>
-              <h2 style="margin-bottom: 0">
-                <i class="fa fa-long-arrow-left fa-3x"></i>
-              </h2>
-            </a>
-          </button>
-          <span style="color: white; font-size: 1.5em;">Slide {{ projectsSlideNum }}/{{ projectsMaxSlides }}</style>
-          <button style="height: 100%" ng-click="projectsNext()">
-            <a>
-              <h2 style="margin-bottom: 0">
-                <i class="fa fa-long-arrow-right fa-3x"></i>
-              </h2>
-            </a>
-          </button>
-        </div>
-        <section class="projects slider" id="projectSlider">
-          <div>
-            <div ng-include="'projects/avaron.html'"></div>
-          </div>
-        </section>
-      </div> -->
-
-    <!-- Right hand side of page -->
-    <!-- <div class="six columns offset-by-one" id="media" style="margin-top: 5%">
-
-        <div ng-include="'blogbio.html'"></div>
-
-        <div class="cardColumn">
-          <div class="card" ng-click="showListen = !showListen">
-            <h3>Something to listen to:</h3>
-            <div ng-include="'listenRecommendations/current.html'"></div>
-          </div>
-
-          <div class="card" ng-click="showWatch = !showWatch">
-            <h3>Something to watch:</h3>
-            <div ng-include="'watchRecommendations/current.html'"></div>
-          </div>
-
-          <div class="pics">
-            <h3>Some photos I've taken</h3>
-            <button style="height: 100%" ng-click="photosPrev()">
-              <a>
-                <h2 style="margin-bottom: 0">
-                  <i class="fa fa-long-arrow-left fa-3x"></i>
-                </h2>
-              </a>
-            </button>
-            <button style="height: 100%" ng-click="photosNext()">
-              <a>
-                <h2 style="margin-bottom: 0">
-                  <i class="fa fa-long-arrow-right fa-3x"></i>
-                </h2>
-              </a>
-            </button>
-            <section class="photos slider" id="photoSlider">
-              <div ng-repeat="photo in images">
-                <p>Photo: {{ $index+1 }}/{{ images.length }}</p><hr>
-                <p>{{ photo.desc }}</p>
-                <a href="{{ photo.full }}" target="_blank">
-                  <img ng-src="{{ photo.thumb }}" ng-click="gEvent('ExternalClick', photo.full)">
-                </a>
-              </div>
-            </section>            
-            <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
-            Click on photo to open full sized image
-            </p>
-          </div>
-
-          <a href="favourites.html" target="_blank">
-          <div class="card">
-            <h3>Some of my favourites</h3>
-            <p style="color: white; margin-bottom: 0.2em; margin-top: 0.2em;">
-            Click me to go see some of my favourite movies, music, etc</p>
-          </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
     <!-- Contact -->
     <section class="contact" id="contactArea">

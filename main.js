@@ -51,37 +51,6 @@ site.controller("mainController", function($scope, $rootScope) {
       event_category: category
     });
   };
-
-  // Media cards
-  $scope.showListen = false;
-  $scope.showWatch = false;
-
-  // Project Carousel
-  $scope.projectsSlideNum = 1;
-  $scope.projectsMaxSlides = 1;
-  $scope.projectsNext = function() {
-    $(".projects").slick("slickNext");
-    ++$scope.projectsSlideNum;
-    if ($scope.projectsSlideNum > $scope.projectsMaxSlides)
-      $scope.projectsSlideNum = 1;
-  };
-
-  $scope.projectsPrev = function() {
-    $(".projects").slick("slickPrev");
-    --$scope.projectsSlideNum;
-    if ($scope.projectsSlideNum < 1)
-      $scope.projectsSlideNum = $scope.projectsMaxSlides;
-  };
-
-  // Photos Carousel
-  $scope.images = pics;
-  $scope.photosNext = function() {
-    $(".photos").slick("slickNext");
-  };
-
-  $scope.photosPrev = function() {
-    $(".photos").slick("slickPrev");
-  };
 });
 
 site.controller("photosController", function($scope, $rootScope) {
@@ -93,7 +62,7 @@ site.controller("photosController", function($scope, $rootScope) {
 site.config([
   "$locationProvider",
   function($locationProvider) {
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix("");
   }
 ]);
