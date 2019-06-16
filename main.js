@@ -54,9 +54,28 @@ site.controller("mainController", function($scope, $rootScope) {
 });
 
 site.controller("photosController", function($scope, $rootScope) {
+  scrollFunction("#top");
   $rootScope.active = "photos";
   $scope.pics = pics;
-  scrollFunction("#top");
+  // Fisher-Yates Shuffle algorithm
+  for (let i = $scope.pics.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+    [$scope.pics[i], $scope.pics[j]] = [$scope.pics[j], $scope.pics[i]]; // swap elements
+  }
+  // Client side pagination
+  $scope.currentPage = 0;
+  $scope.pageSize = 6;
+  $scope.numberOfPages = Math.ceil($scope.pics.length / $scope.pageSize);
+  $scope.prevPage = () => {
+    if ($scope.currentPage == 0) {
+      $scope.currentPage = $scope.numberOfPages - 1;
+    } else {
+      $scope.currentPage = $scope.currentPage - 1;
+    }
+  };
+  $scope.nextPage = () => {
+    $scope.currentPage = ($scope.currentPage + 1) % $scope.numberOfPages;
+  };
 });
 
 site.config([

@@ -4,6 +4,7 @@
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
   padding: 1em;
+  line-height: 1.5em;
 }
 
 a {
@@ -11,10 +12,29 @@ a {
   text-decoration: none;
 }
 
+.pageControl {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+.pageControl h4 {
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.pageControl button {
+  margin: 0 1em;
+  padding: 0.5em 1em;
+  height: 100%;
+}
+
 .pictureContainer {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  justify-content: center;
 }
 
 .pictureContainer .frame {
@@ -35,4 +55,11 @@ img {
   object-fit: contain;
   border: 1px solid white;
   background-color: black;
+}
+
+@media (max-width: 650px) {
+  .intro {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+  }
 }

@@ -52,8 +52,13 @@ header {
 
 .mainmenu ul {
   display: flex;
-  flex-wrap: wrap;
+  font-size: 1em;
   margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .mainmenu ul {
+    font-size: 0.9em;
+  }
 }
 
 .mainmenu ul a {

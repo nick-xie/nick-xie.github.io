@@ -11,7 +11,7 @@
           <a href="https://www.instagram.com/_nick_xie_/" target="_blank"
             >@_nick_xie_</a
           >
-          for another source of rarely updated pics.
+          for another source of rarely updated pics :)
         </h4>
       </div>
     </div>
@@ -19,8 +19,19 @@
 </section>
 
 <section class="content">
+  <div class="pageControl">
+    <button ng-click="prevPage()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h4>Page: {{ currentPage + 1 }}/{{ numberOfPages }}</h4>
+    <button ng-click="nextPage()">
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
   <div class="container pictureContainer">
-    <div ng-repeat="photo in pics">
+    <div
+      ng-repeat="photo in pics | limitTo : pageSize : (pageSize * currentPage)"
+    >
       <a href="{{ photo.full }}" target="_blank">
         <div class="frame">
           <img
@@ -31,5 +42,14 @@
         </div>
       </a>
     </div>
+  </div>
+  <div class="pageControl">
+    <button ng-click="prevPage()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h4>Page: {{ currentPage + 1 }}/{{ numberOfPages }}</h4>
+    <button ng-click="nextPage()">
+      <i class="fas fa-arrow-right"></i>
+    </button>
   </div>
 </section>

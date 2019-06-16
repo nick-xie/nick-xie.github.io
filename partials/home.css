@@ -9,6 +9,16 @@ p.bigcenter {
   text-align: center;
   color: white;
   font-size: 8.3em;
+  line-height: 1.5em;
+}
+@media (max-width: 650px) {
+  p {
+    font-size: 1.2em;
+  }
+  p.bigcenter {
+    margin-top: 0.5em;
+    font-size: 6em;
+  }
 }
 
 h4 {
