@@ -31,8 +31,8 @@ export default [
       "Some foggy morning walking from my dorm to class in my first year at Waterloo."
   },
   {
-    thumb: "images/slideshow/edited2.jpg",
-    full: "images/slideshow/edited.jpg",
+    thumb: "images/slideshow/liujiazui2.jpg",
+    full: "images/slideshow/liujiazui.jpg",
     desc:
       "At Liujiazui in Shanghai. One of my favourite places in the whole world."
   },
@@ -67,5 +67,85 @@ export default [
     full: "images/slideshow/kitchener.jpg",
     desc:
       "Picture of some of Kitchener's distinctive historical building style."
+  },
+  {
+    thumb: "images/slideshow/moscow2.jpg",
+    full: "images/slideshow/moscow.jpg",
+    desc: "In Moscow by St. Basil's Cathedral overlooking the Moskov River"
+  },
+  {
+    thumb: "images/slideshow/bloorviaduct2.jpg",
+    full: "images/slideshow/bloorviaduct.jpg",
+    desc:
+      "Bloor Viaduct in Toronto. I love the retro futuristic feeling of this bridge with the train underneath it."
+  },
+  {
+    thumb: "images/slideshow/riverdale2.jpg",
+    full: "images/slideshow/riverdale.jpg",
+    desc:
+      "Love Riverdale Park in Toronto. Had to get up a ridiculously steep hill for this pic"
+  },
+  {
+    thumb: "images/slideshow/barcelonasky2.jpg",
+    full: "images/slideshow/barcelonasky.jpg",
+    desc: "This building took a long time to make I hear"
+  },
+  {
+    thumb: "images/slideshow/sagrada2.jpg",
+    full: "images/slideshow/sagrada.jpg",
+    desc: "Sagrada Familia was unreal, felt absolutely tiny inside."
+  },
+  {
+    thumb: "images/slideshow/levanto2.jpg",
+    full: "images/slideshow/levanto.jpg",
+    desc: "Beach in Levanto by Cinque Terre. Beaches are sunny and hot."
+  },
+  {
+    thumb: "images/slideshow/romebird2.jpg",
+    full: "images/slideshow/romebird.jpg",
+    desc:
+      "This is a picture of a bird I took by the Pantheon in Rome. Seemed a bit unhappy"
+  },
+  {
+    thumb: "images/slideshow/montecarlo2.jpg",
+    full: "images/slideshow/montecarlo.jpg",
+    desc: "Making big $$ MONEY $$ moves at Monte Carlo in Monaco"
+  },
+  {
+    thumb: "images/slideshow/cinqueterre2.jpg",
+    full: "images/slideshow/cinqueterre.jpg",
+    desc: "Shadows can you please go the other direction"
+  },
+  {
+    thumb: "images/slideshow/pantheon2.jpg",
+    full: "images/slideshow/pantheon.jpg",
+    desc:
+      "Not sure what I was originally going for here but this angle looks kewl"
+  },
+  {
+    thumb: "images/slideshow/barcelona2.jpg",
+    full: "images/slideshow/barcelona.jpg",
+    desc: "Barça, barça, barça!"
+  },
+  {
+    thumb: "images/slideshow/trevi2.jpg",
+    full: "images/slideshow/trevi.jpg",
+    desc: "Just some people at the ol' watering hole"
+  },
+  {
+    thumb: "images/slideshow/reflection2.jpg",
+    full: "images/slideshow/reflection.jpg",
+    desc:
+      "This makes me want to go listen to the theme song from Dawson's Creek"
+  },
+  {
+    thumb: "images/slideshow/nice2.jpg",
+    full: "images/slideshow/nice.jpg",
+    desc: "Nice is nice. Okay I'll leave now"
+  },
+  {
+    thumb: "images/slideshow/nicesky2.jpg",
+    full: "images/slideshow/nicesky.jpg",
+    desc: "Nice is nice. Okay I'll leave now"
   }
 ];
