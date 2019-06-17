@@ -66,7 +66,10 @@ site.controller("photosController", function($scope, $rootScope) {
   $scope.currentPage = 0;
   $scope.pageSize = 6;
   $scope.numberOfPages = Math.ceil($scope.pics.length / $scope.pageSize);
-  $scope.prevPage = () => {
+  $scope.prevPage = scroll => {
+    if (scroll) {
+      scrollFunction("#photos");
+    }
     if ($scope.currentPage == 0) {
       $scope.currentPage = $scope.numberOfPages - 1;
     } else {
@@ -74,6 +77,9 @@ site.controller("photosController", function($scope, $rootScope) {
     }
   };
   $scope.nextPage = () => {
+    if (scroll) {
+      scrollFunction("#photos");
+    }
     $scope.currentPage = ($scope.currentPage + 1) % $scope.numberOfPages;
   };
 });

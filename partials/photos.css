@@ -5,6 +5,8 @@
   background: rgba(0, 0, 0, 0.6);
   padding: 1em;
   line-height: 1.5em;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
 }
 
 a {
@@ -28,6 +30,17 @@ a {
   margin: 0 1em;
   padding: 0.5em 1em;
   height: 100%;
+}
+.orderText {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.orderText span {
+  text-align: center;
+  justify-content: center;
+  color: white;
+  width: 75%;
 }
 
 .pictureContainer {
@@ -61,5 +74,10 @@ img {
   .intro {
     font-size: 1.2em;
     margin-top: 1.5em;
+  }
+  .orderText span {
+    font-size: 0.7em;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
   }
 }

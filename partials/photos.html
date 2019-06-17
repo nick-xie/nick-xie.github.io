@@ -4,27 +4,27 @@
       <div class="ten columns offset-by-one" style="margin-top: 10%">
         <h4 class="intro">
           Hey, check out some of my pics below. You can click on any of them to
-          get the full sized image.
-          <br />
-          I don't update these nearly often enough so feel free to follow me on
-          Instagram
-          <a href="https://www.instagram.com/_nick_xie_/" target="_blank"
-            >@_nick_xie_</a
-          >
-          for another source of rarely updated pics :)
+          get the full sized image :)
         </h4>
+        <div class="orderText">
+          <span
+            >*picture order is randomized on every visit to the site using the
+            Fisher-Yates Shuffle algorithm. Why? Because every photo deserves
+            its moment on the frontpage.</span
+          >
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="content">
-  <div class="pageControl">
-    <button ng-click="prevPage()">
+  <div class="pageControl" id="photos">
+    <button ng-click="prevPage(false)">
       <i class="fas fa-arrow-left"></i>
     </button>
     <h4>Page: {{ currentPage + 1 }}/{{ numberOfPages }}</h4>
-    <button ng-click="nextPage()">
+    <button ng-click="nextPage(false)">
       <i class="fas fa-arrow-right"></i>
     </button>
   </div>
@@ -44,11 +44,11 @@
     </div>
   </div>
   <div class="pageControl">
-    <button ng-click="prevPage()">
+    <button ng-click="prevPage(true)">
       <i class="fas fa-arrow-left"></i>
     </button>
     <h4>Page: {{ currentPage + 1 }}/{{ numberOfPages }}</h4>
-    <button ng-click="nextPage()">
+    <button ng-click="nextPage(true)">
       <i class="fas fa-arrow-right"></i>
     </button>
   </div>
