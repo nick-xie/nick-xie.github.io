@@ -66,13 +66,24 @@
     <header>
       <div class="mainmenu" style="margin-top: 5%;">
         <ul id="menu">
-          <a href="/" ng-class="{ curMenuItem: active == 'home' }"
+          <a
+            href="/"
+            ng-class="{ curMenuItem: active == 'home' }"
+            ng-click="gEvent('ExternalClick','home')"
             ><li>home</li></a
           >
-          <a href="/blog" target="_blank"><li>blog</li></a>
+          <a
+            href="/blog"
+            target="_blank"
+            ng-click="gEvent('ExternalClick','blog')"
+            ><li>blog</li></a
+          >
           <!-- <a href="/projects"><li>projects</li></a> -->
 
-          <a href="/#/photos" ng-class="{ curMenuItem: active == 'photos' }"
+          <a
+            href="/#/photos"
+            ng-class="{ curMenuItem: active == 'photos' }"
+            ng-click="gEvent('ExternalClick','photos')"
             ><li>photos</li></a
           >
           <a ng-click="scrollTo('#contactArea')"><li>contact</li></a>

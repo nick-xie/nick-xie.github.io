@@ -55,6 +55,12 @@ site.controller("mainController", function($scope, $rootScope) {
 
 site.controller("photosController", function($scope, $rootScope) {
   scrollFunction("#top");
+  // gEvent
+  $scope.gEvent = function(category, action) {
+    gtag("event", action, {
+      event_category: category
+    });
+  };
   $rootScope.active = "photos";
   $scope.pics = pics;
   // Fisher-Yates Shuffle algorithm
@@ -67,6 +73,7 @@ site.controller("photosController", function($scope, $rootScope) {
   $scope.pageSize = 6;
   $scope.numberOfPages = Math.ceil($scope.pics.length / $scope.pageSize);
   $scope.prevPage = scroll => {
+    $scope.gEvent("ExternalClick", "prevPhotos");
     if (scroll) {
       scrollFunction("#photos");
     }
@@ -77,6 +84,7 @@ site.controller("photosController", function($scope, $rootScope) {
     }
   };
   $scope.nextPage = () => {
+    $scope.gEvent("ExternalClick", "nextPhotos");
     if (scroll) {
       scrollFunction("#photos");
     }
