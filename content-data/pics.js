@@ -165,15 +165,45 @@ export default [
       "Came across this man with his dog in the mountains and he was very friendly"
   },
   {
-    thumb: "images/slideshow/valley.jpg",
-    full: "images/slideshow/valley2.jpg",
+    thumb: "images/slideshow/valley2.jpg",
+    full: "images/slideshow/valley.jpg",
     desc:
       "Went from where this pic was taken to the summit and down in one long ass day"
   },
   {
-    thumb: "images/slideshow/limaboardwalk.jpg",
-    full: "images/slideshow/limaboardwalk2.jpg",
+    thumb: "images/slideshow/limaboardwalk2.jpg",
+    full: "images/slideshow/limaboardwalk.jpg",
     desc:
       "Boardwalk in Miraflores, Lima. If you can't tell, I love coastal cities at night time"
+  },
+  {
+    thumb: "images/slideshow/stars2.jpg",
+    full: "images/slideshow/stars.jpg",
+    desc: "Sky during night 2 of the Lares Trek"
+  },
+  {
+    thumb: "images/slideshow/doggo2.jpg",
+    full: "images/slideshow/doggo.jpg",
+    desc: "Who's a good doggo? Who's a good doggo?"
+  },
+  {
+    thumb: "images/slideshow/cusco2.jpg",
+    full: "images/slideshow/cusco.jpg",
+    desc: "beep beep"
+  },
+  {
+    thumb: "images/slideshow/summit2.jpg",
+    full: "images/slideshow/summit.jpg",
+    desc: ">4500m above sea level is quite literally breathtaking"
+  },
+  {
+    thumb: "images/slideshow/cloudysquare2.jpg",
+    full: "images/slideshow/cloudysquare.jpg",
+    desc: "Much cloud, much rock"
+  },
+  {
+    thumb: "images/slideshow/cloudyrock2.jpg",
+    full: "images/slideshow/cloudyrock.jpg",
+    desc: "Earth is amazing man"
   }
 ];
