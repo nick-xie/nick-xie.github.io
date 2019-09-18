@@ -147,5 +147,33 @@ export default [
     thumb: "images/slideshow/nicesky2.jpg",
     full: "images/slideshow/nicesky.jpg",
     desc: "Nice is nice. Okay I'll leave now"
+  },
+  {
+    thumb: "images/slideshow/stampede2.jpg",
+    full: "images/slideshow/stampede.jpg",
+    desc: "March of the alpacas, llamas, and sheep"
+  },
+  {
+    thumb: "images/slideshow/alpaca2.jpg",
+    full: "images/slideshow/alpaca.jpg",
+    desc: "durp"
+  },
+  {
+    thumb: "images/slideshow/mountainman2.jpg",
+    full: "images/slideshow/mountainman.jpg",
+    desc:
+      "Came across this man with his dog in the mountains and he was very friendly"
+  },
+  {
+    thumb: "images/slideshow/valley.jpg",
+    full: "images/slideshow/valley2.jpg",
+    desc:
+      "Went from where this pic was taken to the summit and down in one long ass day"
+  },
+  {
+    thumb: "images/slideshow/limaboardwalk.jpg",
+    full: "images/slideshow/limaboardwalk2.jpg",
+    desc:
+      "Boardwalk in Miraflores, Lima. If you can't tell, I love coastal cities at night time"
   }
 ];
