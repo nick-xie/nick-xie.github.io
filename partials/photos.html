@@ -1,7 +1,7 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="ten columns offset-by-one" style="margin-top: 10%">
+      <div class="ten columns offset-by-one" style="margin-top: 10%;">
         <h4 class="intro">
           Hey, check out some of my pics below. You can click on any of them to
           get the full sized image :)
@@ -12,6 +12,14 @@
             Fisher-Yates Shuffle algorithm. Why? So individual visits to this
             site are a bit more unique :)</span
           >
+        </div>
+        <div class="photoSettings">
+          <button ng-click="captions = !captions">
+            Turn {{captions ? 'off' : 'on'}} captions
+          </button>
+          <button ng-click="crop = !crop">
+            {{crop ? 'Fit full image' : 'Fit images to square'}}
+          </button>
         </div>
       </div>
     </div>
@@ -35,10 +43,11 @@
       <a href="{{ photo.full }}" target="_blank">
         <div class="frame">
           <img
+            ng-class="{ cropImg: crop }"
             ng-src="{{ photo.thumb }}"
             ng-click="gEvent('ExternalClick', photo.full)"
           />
-          <p>{{ photo.desc }}</p>
+          <p ng-if="captions">{{ photo.desc }}</p>
         </div>
       </a>
     </div>

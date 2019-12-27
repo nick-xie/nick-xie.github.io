@@ -69,6 +69,27 @@ img {
   border: 1px solid white;
   background-color: black;
 }
+.cropImg {
+  object-fit: cover;
+}
+
+.photoSettings {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}
+.photoSettings button {
+  margin-right: 10px;
+  max-width: 50%;
+  word-wrap: break-word;
+  white-space: normal;
+  height: auto;
+  line-height: 2em;
+}
+.photoSettings button:last-child {
+  margin-right: 0;
+}
 
 @media (max-width: 650px) {
   .intro {

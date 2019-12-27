@@ -63,6 +63,7 @@ site.controller("photosController", function($scope, $rootScope) {
   };
   $rootScope.active = "photos";
   $scope.pics = pics;
+  $scope.captions = true;
   // Fisher-Yates Shuffle algorithm
   for (let i = $scope.pics.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
