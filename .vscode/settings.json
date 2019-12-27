@@ -1,8 +1,12 @@
 {
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    }
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "vscode_custom_css.imports": [
+    "file:///Users/nicholasxie/Documents/Repositories/vscode-custom-styles.css"
+  ],
+  "vscode_custom_css.policy": true
 }
