@@ -205,5 +205,73 @@ export default [
     thumb: "images/slideshow/cloudyrock2.jpg",
     full: "images/slideshow/cloudyrock.jpg",
     desc: "Earth is amazing man"
+  },
+  {
+    thumb: "images/slideshow/torontonight2.jpg",
+    full: "images/slideshow/torontonight.jpg",
+    desc:
+      "Long(ish) exposure from my balcony sans tripod. Blurry mess but oh well"
+  },
+  {
+    thumb: "images/slideshow/torontonightcars2.jpg",
+    full: "images/slideshow/torontonightcars.jpg",
+    desc:
+      "Views from the apartment in Toronto I lived in for a bit. Pretty lively"
+  },
+  {
+    thumb: "images/slideshow/torontosky2.jpg",
+    full: "images/slideshow/torontosky.jpg",
+    desc: "Concrete wet dream tomato"
+  },
+  {
+    thumb: "images/slideshow/noisybuildings2.jpg",
+    full: "images/slideshow/noisybuildings.jpg",
+    desc: "Yes, I have Huji cam on my phone"
+  },
+  {
+    thumb: "images/slideshow/Lbuilding2.jpg",
+    full: "images/slideshow/Lbuilding.jpg",
+    desc: "Stare directly into sunlight"
+  },
+  {
+    thumb: "images/slideshow/me2.jpg",
+    full: "images/slideshow/me.jpg",
+    desc: "This is my edgy self portrait"
+  },
+  {
+    thumb: "images/slideshow/hillsidewater2.jpg",
+    full: "images/slideshow/hillsidewater.jpg",
+    desc: "Summer sunsets can't be beat"
+  },
+  {
+    thumb: "images/slideshow/cloud2.jpg",
+    full: "images/slideshow/cloud.jpg",
+    desc: "Post thunderstorm cloud"
+  },
+  {
+    thumb: "images/slideshow/strides2.jpg",
+    full: "images/slideshow/strides.jpg",
+    desc: "No better way to spend a summer twilight"
+  },
+  {
+    thumb: "images/slideshow/sunsetstrides2.jpg",
+    full: "images/slideshow/sunsetstrides.jpg",
+    desc: "No feeling like it"
+  },
+  {
+    thumb: "images/slideshow/race2.jpg",
+    full: "images/slideshow/race.jpg",
+    desc: "Run is fun"
+  },
+  {
+    thumb: "images/slideshow/cellos2.jpg",
+    full: "images/slideshow/cellos.jpg",
+    desc: "Very big violin"
+  },
+  {
+    thumb: "images/slideshow/flower2.jpg",
+    full: "images/slideshow/flower.jpg",
+    desc:
+      "I feel like every person with a DSLR has a photo like this so here's mine"
   }
 ];
